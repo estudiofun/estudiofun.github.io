@@ -18,7 +18,7 @@
 </head>
 <body>
     <main id="game">
-        <section class="texto">
+        <section class="texto" v-if="isFinished === false">
             <section class="texto__main">
                 <!--<h1 class="texto__question">{{ texto.question }}</h1>-->
                 <p class="texto__text">
@@ -52,7 +52,7 @@
                         </ol>
                     </section>
                     <section class="texto__options-container-result" v-if="selectedBook !== '?' && selectedChapter !== '?' && selectedVerse !== '?' && isCorrect">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" fill="green" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.507 13.941c-1.512 1.195-3.174 1.931-5.506 1.931-2.334 0-3.996-.736-5.508-1.931l-.493.493c1.127 1.72 3.2 3.566 6.001 3.566 2.8 0 4.872-1.846 5.999-3.566l-.493-.493zm-9.007-5.941c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5-.672-1.5-1.5-1.5zm7 0c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5-.672-1.5-1.5-1.5z"/></svg>
                         &nbsp;&nbsp;Correct!
                     </section>
                     <section class="texto__options-container-accuracy" v-if="!Number.isNaN(accuracy)">
@@ -82,9 +82,14 @@
                     </section>
                 </div>
                 <button class="button button--medium button--primary" v-if="isCorrect" v-on:click="nextQuestion">Next</button>
-                <button class="button button--medium" v-if="isCorrect">Stop For Now</button>
-                <small style="font-size: 0.7rem;">{{ texto.book }} {{ texto.chapter }}:{{ texto.verse }}</small>
+                <button class="button button--medium" v-if="isCorrect" v-on:click="isFinished = true">Stop For Now</button>
             </section>
+        </section>
+        <section class="finished" v-if="isFinished === true">
+            <h1>Total Scriptures: {{ currentIndex + 1 }}</h1>
+            Accuracy: {{ accuracy }}%
+            <br />
+            Refresh this page to start over
         </section>
     </main>
     <script src="memoria.js"></script>

@@ -18,11 +18,9 @@ var app = new Vue({
       currentSelection: "book",
       isCorrect: false,
       totalCorrect: 0,
-      totalCurrentIncorrect: 0,
-      currentHasBeenIncorrect: false,
-      totalCorrect: 0,
       totalAttempts: 0,
-      maxIncorrect: 3
+      maxIncorrect: 3,
+      isFinished: false
     },
     created: function () {
         this.setBooks();

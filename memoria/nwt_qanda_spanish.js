@@ -45,7 +45,7 @@ var data_spanish = [
         "book": "Josue",
         "chapter": "1",
         "verse": "8",
-        "text": "This book of the Law should not depart from your mouth, and you must read it in an undertone day and night, in order to observe carefully all that is written in it; for then your way will be successful and then you will act wisely."
+        "text": "Este libro de la Ley no debe apartarse de tu boca, y tienes que leerlo y meditar en él día y noche, a fin de que obedezcas cuidadosamente todo lo que está escrito en él; porque entonces te irá bien en tu camino y entonces actuarás con sabiduría"
     },
     {
         "qid": 2,
@@ -53,7 +53,7 @@ var data_spanish = [
         "book": "Nehemiah",
         "chapter": "8",
         "verse": "8",
-        "text": "They continued reading aloud from the book, from the Law of the true God, clearly explaining it and putting meaning into it; so they helped the people to understand what was being read."
+        "text": "Y siguieron leyendo en voz alta el libro de la Ley del Dios verdadero y explicando con claridad lo que quería decir. Así ayudaron al pueblo a entender lo que se estaba leyendo"
     },
     {
         "qid": 2,
@@ -61,7 +61,7 @@ var data_spanish = [
         "book": "Salmo",
         "chapter": "1",
         "verse": "2",
-        "text": "his delight is in the law of Jehovah, and he reads His law in an undertone day and night"
+        "text": "disfruta con la ley de Jehová; día y noche lee su ley y medita en ella"
     },
     {
         "qid": 2,
@@ -69,7 +69,7 @@ var data_spanish = [
         "book": "Hechos",
         "chapter": "8",
         "verse": "30, 31",
-        "text": "‘Do you actually know what you are reading?’ He said: ‘Really, how could I ever do so unless someone guided me?’"
+        "text": "‘¿De veras entiendes lo que estás leyendo?’. Él le respondió: ‘¿Y cómo voy a entenderlo sin alguien que me enseñe?’"
     },
     {
         "qid": 2,
@@ -77,7 +77,7 @@ var data_spanish = [
         "book": "Romanos",
         "chapter": "1",
         "verse": "20",
-        "text": "His invisible qualities are clearly seen from the world’s creation onward, because they are perceived by the things made, even his eternal power and Godship, so that they are inexcusable."
+        "text": "Porque sus cualidades invisibles —su poder eterno y divinidad— se ven claramente desde la creación del mundo, pues se perciben por las cosas creadas, de modo que ellos no tienen excusa"
     },
     {
         "qid": 2,
@@ -85,7 +85,7 @@ var data_spanish = [
         "book": "1 Timoteo",
         "chapter": "4",
         "verse": "15",
-        "text": "Ponder over these things; be absorbed in them, so that your advancement may be plainly seen by all people."
+        "text": "Reflexiona sobre estas cosas; dedícate de lleno a ellas, para que todos vean claramente tu progreso"
     },
     {
         "qid": 2,
@@ -93,7 +93,7 @@ var data_spanish = [
         "book": "Hebreos",
         "chapter": "10",
         "verse": "24, 25",
-        "text": "Let us consider one another so as to incite to love and fine works, not forsaking our meeting together."
+        "text": "Y estemos pendientes unos de otros para motivarnos a mostrar amor y a hacer buenas obras, sin dejar de reunirnos"
     },
     {
         "qid": 2,
@@ -101,7 +101,7 @@ var data_spanish = [
         "book": "Santiago",
         "chapter": "1",
         "verse": "5",
-        "text": "If any one of you is lacking in wisdom, let him keep asking God, for he gives generously to all and without reproaching, and it will be given him."
+        "text": "Si a alguno de ustedes le falta sabiduría, que se la pida constantemente a Dios, y la recibirá, porque él da generosamente a todos y sin reproches"
     },
     {
         "qid": 3,
@@ -109,7 +109,7 @@ var data_spanish = [
         "book": "Éxodo",
         "chapter": "24",
         "verse": "4",
-        "text": "Moses wrote down all the words of Jehovah."
+        "text": "Moisés puso por escrito todas las palabras de Jehová"
     },
     {
         "qid": 3,
