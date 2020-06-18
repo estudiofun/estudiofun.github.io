@@ -1,4 +1,4 @@
-var textos = _.shuffle(data_spanish);
+var textos = _.shuffle(data_english);
 var startingIndex = 0;
 
 // after each selection show 'Another one...' or 'I'm done. How did I do?'
@@ -32,6 +32,9 @@ var app = new Vue({
     computed: {
       accuracy: function () {
         return Math.round((this.totalCorrect / this.totalAttempts) * 100);
+      },
+      accuracyPercentage: function () {
+        return Math.round((this.totalCorrect / this.totalAttempts) * 100) - 100 + "%";
       }
     },
     methods: {
@@ -86,13 +89,28 @@ var app = new Vue({
 
           if (!this.isCorrect) {
             if (this.currentSelection === "book" && this.selectedBook === this.texto.book) {
-              this.currentSelection = "chapter";
+              if (this.selectedChapter === this.texto.chapter) {
+                this.currentSelection = "verse";
+              }
+              else {
+                this.currentSelection = "chapter";
+              }
             }
             if (this.currentSelection === "chapter" && this.selectedChapter === this.texto.chapter) {
-              this.currentSelection = "verse";
+              if (this.selectedVerse === this.texto.verse) {
+                this.currentSelection = "book";
+              }
+              else {
+                this.currentSelection = "verse";
+              }
             }
             if (this.currentSelection === "verse" && this.selectedVerse === this.texto.verse) {
-              this.currentSelection = "book";
+              if (this.selectedBook === this.texto.book) {
+                this.currentSelection = "chapter";
+              }
+              else {
+                this.currentSelection = "book";
+              }
             }
           }
       }

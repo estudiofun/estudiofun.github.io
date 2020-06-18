@@ -31,35 +31,59 @@
             <section class="texto__select">
                 <p class="texto__text-prefix">{{ texto.question }}</p>
                 <p class="citation">
-                    <a href="#" v-on:click="currentSelection = 'book'" class="citation__book" v-bind:class="{ 'citation--active': currentSelection === 'book' }">{{ selectedBook }}</a>&nbsp;&nbsp;<a v-on:click="currentSelection = 'chapter'" href="#" class="citation__chapter" v-bind:class="{ 'citation--active': currentSelection === 'chapter' }">{{ selectedChapter }}</a><span class="citation__separator">:</span><a v-on:click="currentSelection = 'verse'" href="#" class="citation__verse" v-bind:class="{ 'citation--active': currentSelection === 'verse' }">{{ selectedVerse }}</a>
+                    <a href="#" v-on:click="currentSelection = 'book'" class="citation__book" v-bind:class="{ 'citation--active': currentSelection === 'book', 'citation--incorrect': selectedBook !== texto.book && selectedBook !== '?' }">{{ selectedBook }}</a>&nbsp;&nbsp;<a v-on:click="currentSelection = 'chapter'" href="#" class="citation__chapter" v-bind:class="{ 'citation--active': currentSelection === 'chapter', 'citation--incorrect': selectedChapter !== texto.chapter && selectedChapter !== '?' }">{{ selectedChapter }}</a><span class="citation__separator">:</span><a v-on:click="currentSelection = 'verse'" href="#" class="citation__verse" v-bind:class="{ 'citation--active': currentSelection === 'verse', 'citation--incorrect': selectedVerse !== texto.verse && selectedVerse !== '?' }">{{ selectedVerse }}</a>
                 </p>
-                <p v-if="selectedBook !== '?' && selectedChapter !== '?' && selectedVerse !== '?'">
-                    <span v-if="isCorrect">Correct!</span>
-                    <span v-if="!isCorrect">Incorrect!</span>
-                </p>
-                <div class="texto__options-container" v-if="!isCorrect">
-                    <ol class="texto__options texto__options--book" v-if="currentSelection === 'book'">
-                        <li v-for="book in books" class="texto__option texto__option--book">
-                            <a href="#" class="texto__option-link" v-on:click="selectedBook = book; checkAnswer();">{{ book }}</a>
-                        </li>
-                    </ol>
-                    <ol class="texto__options texto__options--chapters" v-if="currentSelection === 'chapter'">
-                        <li v-for="chapter in chapters" class="texto__option texto__option--chapter">
-                            <a href="#" class="texto__option-link" v-on:click="selectedChapter = chapter; checkAnswer();">{{ chapter }}</a>
-                        </li>
-                    </ol>
-                    <ol class="texto__options texto__options--verses" v-if="currentSelection === 'verse'">
-                        <li v-for="verse in verses" class="texto__option texto__option--verse">
-                            <a href="#" class="texto__option-link" v-on:click="selectedVerse = verse; checkAnswer();">{{ verse }}</a>
-                        </li>
-                    </ol>
+                <div class="texto__options-container">
+                    <section class="texto__options-container-list" v-if="!isCorrect">
+                        <ol class="texto__options texto__options--book" v-if="currentSelection === 'book'">
+                            <li v-for="book in books" class="texto__option texto__option--book">
+                                <a href="#" class="texto__option-link" v-on:click="selectedBook = book; checkAnswer();">{{ book }}</a>
+                            </li>
+                        </ol>
+                        <ol class="texto__options texto__options--chapters" v-if="currentSelection === 'chapter'">
+                            <li v-for="chapter in chapters" class="texto__option texto__option--chapter">
+                                <a href="#" class="texto__option-link" v-on:click="selectedChapter = chapter; checkAnswer();">{{ chapter }}</a>
+                            </li>
+                        </ol>
+                        <ol class="texto__options texto__options--verses" v-if="currentSelection === 'verse'">
+                            <li v-for="verse in verses" class="texto__option texto__option--verse">
+                                <a href="#" class="texto__option-link" v-on:click="selectedVerse = verse; checkAnswer();">{{ verse }}</a>
+                            </li>
+                        </ol>
+                    </section>
+                    <section class="texto__options-container-result" v-if="selectedBook !== '?' && selectedChapter !== '?' && selectedVerse !== '?' && isCorrect">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" fill="green" /></svg>
+                        &nbsp;&nbsp;Correct!
+                    </section>
+                    <section class="texto__options-container-accuracy" v-if="!Number.isNaN(accuracy)">
+                        <svg id="line-progress" height="120" width="120">
+                            <g class="progress-container">
+                              <line x1="50%"
+                                  y1="0%"
+                                  x2="50%"
+                                  y2="100%"
+                                  stroke-width="30" />
+                            </g>
+                            <g class="progress-content">
+                              <line
+                                  x1="50%"
+                                  y1="0%"
+                                  x2="50%"
+                                  y2="100%"
+                                  stroke="lightblue" 
+                                  fill="transparent" 
+                                  stroke-dasharray="100%" 
+                                  v-bind:stroke-dashoffset="accuracyPercentage" 
+                                  stroke-width="28" />
+                            </g>
+                          </svg> 
+                        <br />  
+                        Accuracy: {{ accuracy }}%
+                    </section>
                 </div>
-                <button class="button button--medium" v-if="isCorrect" v-on:click="nextQuestion">Next</button>
-                <button class="button button--medium" v-if="isCorrect">Stop For Now, How Did I Do?</button>
-                <section class="accuracy" v-if="!Number.isNaN(accuracy)">
-                    Accuracy: {{ accuracy }}%
-                </section>
-                <small style="font-size: 0.7rem;">{{ texto.book }} {{ texto.chapter }}:{{ texto.verse }} || {{ totalCorrect }} || {{ totalAttempts }}</small>
+                <button class="button button--medium button--primary" v-if="isCorrect" v-on:click="nextQuestion">Next</button>
+                <button class="button button--medium" v-if="isCorrect">Stop For Now</button>
+                <small style="font-size: 0.7rem;">{{ texto.book }} {{ texto.chapter }}:{{ texto.verse }}</small>
             </section>
         </section>
     </main>

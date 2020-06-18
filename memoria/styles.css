@@ -81,6 +81,11 @@ body {
     background-color: lightblue;
 }
 
+.citation--incorrect {
+    background-color: #CD5C5C;
+    opacity: 0.5;
+}
+
 .texto__options-container {
     margin-top: .5rem;
     display: flex;
@@ -89,16 +94,35 @@ body {
 }
 
 .texto__options {
-    list-style-type: lower-latin;
+    /*list-style-type: lower-latin;*/
+    list-style-type: none;
     width: 90%;
     padding: 0;
     margin: 0;
 }
 
+.texto__options-container-list {
+    flex-grow: 1;
+    height: 180px;
+}
+
+.texto__options-container-result {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    height: 180px;
+}
+
+.texto__options-container-accuracy {
+    text-align: center;
+    align-self: center;
+    font-size: 0.75rem;
+}
+
 .texto__option {
     padding: .25rem;
     margin: .75rem 0;
-    border: solid 1px black;
+    border: solid 1px #999;
     white-space: nowrap;
 }
 
@@ -108,15 +132,44 @@ body {
 }
 
 .button {
-    background-color: #4a6da7;
-    color: #fff;
     border: none;
-    padding: .25rem;
+    padding: .5rem;
 }
 
-.accuracy {
-    border-top: solid 1px black;
-    padding: 1rem;
-    margin-top: 1rem;
-    text-align: center;
+.button--primary {
+    color: #fff;
+    background-color: #4a6da7;
 }
+
+
+.progress-container{
+    stroke: #999;
+    stroke-width: 2px;
+    fill: #999;
+  }
+
+.progress-container .top {
+    z-index:2;
+  }
+
+  .progress-content {
+    stroke: red;
+    stroke-width: 2px;
+    fill: red;
+  }
+
+  .progress-content line {
+    transition-property: stroke-dashoffset;
+    transition-duration: 0.5s;
+    transition-delay: 0s;
+  }
+
+  .progress-content .top {
+    z-index:2;
+  }
+
+  .percentage{
+    fill: #F8F9F9;
+    text-shadow: 1px 1px 1px black;
+    font-size: 0.5rem;
+  }
