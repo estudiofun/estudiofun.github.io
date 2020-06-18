@@ -13,12 +13,20 @@
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
     <script src="nwt_qanda_english.js"></script>
     <script src="nwt_qanda_spanish.js"></script>
+    <script src="literals.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <main id="game">
-        <section class="texto" v-if="isFinished === false">
+        <section class="language" v-if="currentLanguage === ''">
+            <h1>Memoria</h1>
+            <br />
+            <a href="#" v-on:click="setLanguage('english')">English</a>
+            <br /><br />
+            <a href="#" v-on:click="setLanguage('spanish')">español</a>
+        </section>
+        <section class="texto" v-if="isFinished === false && currentLanguage !== ''">
             <section class="texto__main">
                 <!--<h1 class="texto__question">{{ texto.question }}</h1>-->
                 <p class="texto__text">
@@ -78,18 +86,20 @@
                             </g>
                           </svg> 
                         <br />  
-                        Accuracy: {{ accuracy }}%
+                        {{ getLiteral('accuracy') }}
+                        <br />
+                        {{ accuracy }}%
                     </section>
                 </div>
-                <button class="button button--medium button--primary" v-if="isCorrect" v-on:click="nextQuestion">Next</button>
-                <button class="button button--medium" v-if="isCorrect" v-on:click="isFinished = true">Stop For Now</button>
+                <button class="button button--medium button--primary" v-if="isCorrect" v-on:click="nextQuestion">{{ getLiteral('next') }}</button>
+                <button class="button button--medium" v-if="isCorrect" v-on:click="isFinished = true">{{ getLiteral('finish') }}</button>
             </section>
         </section>
         <section class="finished" v-if="isFinished === true">
-            <h1>Total Scriptures: {{ currentIndex + 1 }}</h1>
-            Accuracy: {{ accuracy }}%
+            <h1>{{ getLiteral('total') }}: {{ currentIndex + 1 }}</h1>
+            {{ getLiteral('accuracy') }}: {{ accuracy }}%
             <br />
-            Refresh this page to start over
+            {{ getLiteral('refresh') }}
         </section>
     </main>
     <script src="memoria.js"></script>

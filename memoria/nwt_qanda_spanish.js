@@ -117,7 +117,7 @@ var data_spanish = [
         "book": "Daniel",
         "chapter": "7",
         "verse": "1",
-        "text": "Daniel saw a dream and visions of his head as he lay on his bed. Then he wrote down the dream; he recorded a complete account of the matters."
+        "text": "Daniel tuvo un sueño y visiones en su cabeza mientras estaba acostado en la cama. Luego puso por escrito el sueño; dejó un registro completo del asunto"
     },
     {
         "qid": 3,
@@ -125,7 +125,7 @@ var data_spanish = [
         "book": "1 Tesalonicenses",
         "chapter": "2",
         "verse": "13",
-        "text": "When you received God’s word, which you heard from us, you accepted it not as the word of men but, just as it truthfully is, as the word of God."
+        "text": "Cuando ustedes recibieron la palabra de Dios —que oyeron por medio de nosotros—, no la aceptaron como palabra de hombres, sino como lo que de verdad es, como palabra de Dios"
     },
     {
         "qid": 3,
@@ -133,7 +133,7 @@ var data_spanish = [
         "book": "1 Timoteo",
         "chapter": "3",
         "verse": "16",
-        "text": "All Scripture is inspired of God and beneficial for teaching."
+        "text": "Toda la Escritura está inspirada por Dios y es útil para enseñar"
     },
     {
         "qid": 3,
@@ -141,7 +141,7 @@ var data_spanish = [
         "book": "2 Pedro",
         "chapter": "1",
         "verse": "21",
-        "text": "Prophecy was at no time brought by man’s will, but men spoke from God as they were moved by holy spirit."
+        "text": "Nunca se ha hecho una profecía por voluntad del hombre, sino que los hombres hablaron de parte de Dios impulsados por espíritu santo"
     },
     {
         "qid": 4,

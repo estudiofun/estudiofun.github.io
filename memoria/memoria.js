@@ -1,14 +1,13 @@
-var textos = _.shuffle(data_english);
+var defaultTextos = data_english;
 var startingIndex = 0;
-
-// after each selection show 'Another one...' or 'I'm done. How did I do?'
-// at end show total done, total correct, and "accuracy" (percentage correct)
 
 var app = new Vue({
     el: '#game',
     data: {
+      currentLanguage: "",
       currentIndex: startingIndex,
-      texto: textos[startingIndex],
+      textos: defaultTextos,
+      texto: defaultTextos[startingIndex],
       books: [],
       chapters: [],
       verses: [],
@@ -36,11 +35,30 @@ var app = new Vue({
       }
     },
     methods: {
+      setLanguage: function(lang) {
+        this.currentLanguage = lang;
+        if (lang === 'english') {
+          this.textos = _.shuffle(data_english);
+          this.texto = this.textos[startingIndex];
+        }
+
+        if (lang === 'spanish') {
+          this.textos = _.shuffle(data_spanish);
+          this.texto = this.textos[startingIndex];
+        }
+
+        this.setBooks();
+        this.setChapters();
+        this.setVerses();
+      },
+      getLiteral: function(id) {
+        return _.find(literals, { 'id': id })[this.currentLanguage];
+      },
       nextQuestion: function () {
         this.currentIndex = this.currentIndex + 1;
 
-        if (this.currentIndex < textos.length) {
-            this.texto = textos[this.currentIndex];
+        if (this.currentIndex < this.textos.length) {
+            this.texto = this.textos[this.currentIndex];
             this.selectedBook = "?";
             this.selectedChapter = "?";
             this.selectedVerse = "?";
@@ -53,15 +71,15 @@ var app = new Vue({
       },
       setBooks: function () {
         var currentBook = this.texto.book;
-        this.books = _.shuffle(_.concat(_.sampleSize(_.reject(_.uniq(_.map(textos, "book")), function(o) { return o === currentBook; }), 2), this.texto.book));
+        this.books = _.shuffle(_.concat(_.sampleSize(_.reject(_.uniq(_.map(this.textos, "book")), function(o) { return o === currentBook; }), 2), this.texto.book));
       },
       setChapters: function () {
         var currentChapter = this.texto.chapter;
-        this.chapters = _.sortBy(_.concat(_.sampleSize(_.reject(_.uniq(_.map(textos, "chapter")), function(o) { return o === currentChapter; }), 2), this.texto.chapter));
+        this.chapters = _.sortBy(_.concat(_.sampleSize(_.reject(_.uniq(_.map(this.textos, "chapter")), function(o) { return o === currentChapter; }), 2), this.texto.chapter));
       },
       setVerses: function () {
         var currentVerse = this.texto.verse;
-        this.verses = _.sortBy(_.concat(_.sampleSize(_.reject(_.uniq(_.map(textos, "verse")), function(o) { return o === currentVerse; }), 2), this.texto.verse));
+        this.verses = _.sortBy(_.concat(_.sampleSize(_.reject(_.uniq(_.map(this.textos, "verse")), function(o) { return o === currentVerse; }), 2), this.texto.verse));
       },
       checkAnswer: function() {
           

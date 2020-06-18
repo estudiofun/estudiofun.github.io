@@ -13,6 +13,10 @@ body {
     margin: 0 .5rem;
 }
 
+.language {
+    margin: 1rem;
+}
+
 .texto {
     max-width: 500px;
 }
