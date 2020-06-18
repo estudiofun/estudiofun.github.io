@@ -588,7 +588,7 @@ var data_english = [
         "question": "How can you cope with anxiety?",
         "book": "Isaiah",
         "chapter": "41",
-        "verse": "19",
+        "verse": "10",
         "text": "Do not be afraid, for I am with you. Do not be anxious, for I am your God. I will fortify you, yes, I will help you, I will really hold on to you with my right hand of righteousness."
     },
     {

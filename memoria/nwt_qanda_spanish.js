@@ -149,7 +149,7 @@ var data_spanish = [
         "book": "Job",
         "chapter": "26",
         "verse": "7",
-        "text": "He stretches out the northern sky over empty space, suspending the earth upon nothing."
+        "text": "Él extiende el cielo del norte sobre el vacío, suspende la tierra sobre la nada"
     },
     {
         "qid": 4,
@@ -157,7 +157,7 @@ var data_spanish = [
         "book": "Eclesiastés",
         "chapter": "1",
         "verse": "7",
-        "text": "All the streams flow into the sea, yet the sea is not full. To the place from which the streams flow, there they return so as to flow again."
+        "text": "Todos los ríos van a dar al mar, pero el mar no se llena. Los ríos vuelven al lugar donde nacieron para volver a correr de nuevo"
     },
     {
         "qid": 4,
@@ -165,7 +165,7 @@ var data_spanish = [
         "book": "Isaías",
         "chapter": "40",
         "verse": "22",
-        "text": "There is One who dwells above the circle of the earth."
+        "text": "Hay alguien que vive por encima del círculo de la tierra"
     },
     {
         "qid": 5,
@@ -173,7 +173,7 @@ var data_spanish = [
         "book": "Génesis",
         "chapter": "3",
         "verse": "15",
-        "text": "I will put enmity between you and the woman and between your offspring and her offspring. He will crush your head, and you will strike him in the heel."
+        "text": "Haré que haya enemistad entre tú y la mujer, y entre tu descendencia y la descendencia de ella. Él te aplastará la cabeza, y tú le herirás el talón"
     },
     {
         "qid": 5,
@@ -181,7 +181,7 @@ var data_spanish = [
         "book": "Génesis",
         "chapter": "22",
         "verse": "18",
-        "text": "By means of your offspring all nations of the earth will obtain a blessing for themselves because you have listened to my voice."
+        "text": "Todas las naciones de la tierra conseguirán una bendición para ellas mismas mediante tu descendencia, porque tú has escuchado mi voz"
     },
     {
         "qid": 5,
@@ -189,7 +189,7 @@ var data_spanish = [
         "book": "Mateo",
         "chapter": "6",
         "verse": "10",
-        "text": "Let your Kingdom come. Let your will take place, as in heaven, also on earth."
+        "text": "Que venga tu Reino. Que se haga tu voluntad, como en el cielo, también en la tierra"
     },
     {
         "qid": 5,
@@ -197,7 +197,7 @@ var data_spanish = [
         "book": "Romanos",
         "chapter": "16",
         "verse": "20",
-        "text": "For his part, the God who gives peace will crush Satan under your feet shortly."
+        "text": "Por su parte, el Dios que da paz aplastará dentro de poco a Satanás bajo los pies de ustedes"
     },
     {
         "qid": 5,
@@ -205,7 +205,7 @@ var data_spanish = [
         "book": "1 Corintios",
         "chapter": "15",
         "verse": "28",
-        "text": "When all things will have been subjected to him, then the Son himself will also subject himself to the One who subjected all things to him, that God may be all things to everyone."
+        "text": "Cuando todas las cosas hayan sido sometidas a él, entonces el Hijo mismo también se someterá a aquel que sometió todas las cosas a él, para que Dios sea todas las cosas para todos"
     },
     {
         "qid": 5,
@@ -213,7 +213,7 @@ var data_spanish = [
         "book": "Gálatas",
         "chapter": "3",
         "verse": "16, 29",
-        "text": "Now the promises were spoken to Abraham and to his offspring..., who is Christ. Moreover, if you belong to Christ, you are really Abraham’s offspring."
+        "text": "Pues bien, las promesas se las hicieron a Abrahán y a su descendencia [...]: Cristo. Además, si le pertenecen a Cristo, entonces son descendencia de Abrahán"
     },
     {
         "qid": 5,
@@ -221,7 +221,7 @@ var data_spanish = [
         "book": "Apocalipsis",
         "chapter": "11",
         "verse": "15",
-        "text": "The kingdom of the world has become the Kingdom of our Lord and of his Christ, and he will rule as king forever and ever."
+        "text": "El reino del mundo ha llegado a ser el Reino de nuestro Señor y de su Cristo, y él reinará para siempre jamás"
     },
     {
         "qid": 5,
@@ -229,7 +229,7 @@ var data_spanish = [
         "book": "Apocalipsis",
         "chapter": "12",
         "verse": "9",
-        "text": "So down the great dragon was hurled, the original serpent, the one called Devil and Satan, who is misleading the entire inhabited earth; he was hurled down to the earth, and his angels were hurled down with him."
+        "text": "Así que hacia abajo fue arrojado el gran dragón, la serpiente original, al que llaman Diablo y Satanás, que está engañando a toda la tierra habitada. Él fue arrojado a la tierra, y sus ángeles fueron arrojados con él"
     },
     {
         "qid": 5,
@@ -237,7 +237,7 @@ var data_spanish = [
         "book": "Apocalipsis",
         "chapter": "20",
         "verse": "2",
-        "text": "He seized the dragon, the original serpent, who is the Devil and Satan, and bound him for 1,000 years."
+        "text": "Atrapó al dragón, la serpiente original, que es el Diablo y Satanás, y lo ató por 1.000 años"
     },
     {
         "qid": 7,
@@ -245,7 +245,7 @@ var data_spanish = [
         "book": "Mateo",
         "chapter": "24",
         "verse": "7",
-        "text": "Nation will rise against nation and kingdom against kingdom"
+        "text": "Peleará nación contra nación y reino contra reino"
     },
     {
         "qid": 7,
@@ -253,7 +253,7 @@ var data_spanish = [
         "book": "Mateo",
         "chapter": "24",
         "verse": "12",
-        "text": "because of the increasing of lawlessness, the love of the greater number will grow cold."
+        "text": "al aumentar la maldad, se enfriará el amor de la mayoría"
     },
     {
         "qid": 7,
@@ -261,7 +261,7 @@ var data_spanish = [
         "book": "Marcos",
         "chapter": "13",
         "verse": "7",
-        "text": "When you hear of wars and reports of wars, do not be alarmed; these things must take place, but the end is not yet."
+        "text": "Cuando oigan de guerras y noticias de guerras, no se alarmen, porque estas cosas tienen que suceder, pero todavía no es el fin"
     },
     {
         "qid": 7,
@@ -269,7 +269,7 @@ var data_spanish = [
         "book": "Lucas",
         "chapter": "21",
         "verse": "11",
-        "text": "There will be great earthquakes, and in one place after another food shortages and pestilences; and there will be fearful sights and from heaven great signs."
+        "text": "Habrá grandes terremotos y, en un lugar tras otro, hambre y epidemias. Y se verán escenas espantosas y grandes señales del cielo"
     },
     {
         "qid": 7,
@@ -277,7 +277,7 @@ var data_spanish = [
         "book": "2 Timoteo",
         "chapter": "3",
         "verse": "1",
-        "text": "In the last days critical times hard to deal with will be here."
+        "text": "En los últimos días vendrán tiempos críticos y difíciles de soportar"
     },
     {
         "qid": 8,
@@ -285,7 +285,7 @@ var data_spanish = [
         "book": "Job",
         "chapter": "34",
         "verse": "10",
-        "text": "It is unthinkable for the true God to act wickedly, for the Almighty to do wrong!"
+        "text": "¡Es impensable que el Dios verdadero actúe con maldad, que el Todopoderoso haga algo injusto!"
     },
     {
         "qid": 8,
@@ -293,7 +293,7 @@ var data_spanish = [
         "book": "Santiago",
         "chapter": "1",
         "verse": "13",
-        "text": "When under trial, let no one say: ‘I am being tried by God.’ For with evil things God cannot be tried, nor does he himself try anyone."
+        "text": "Que nadie diga durante una prueba: ‘Dios me está probando’. Porque, con cosas malas, nadie puede probar a Dios ni él prueba a nadie"
     },
     {
         "qid": 8,
@@ -301,7 +301,7 @@ var data_spanish = [
         "book": "1 Peter",
         "chapter": "5",
         "verse": "7",
-        "text": "Throw all your anxiety on him, because he cares for you."
+        "text": "Mientras echan todas sus inquietudes sobre él, porque él se preocupa por ustedes"
     },
     {
         "qid": 8,
@@ -309,7 +309,7 @@ var data_spanish = [
         "book": "2 Pedro",
         "chapter": "3",
         "verse": "9",
-        "text": "Jehovah is not slow concerning his promise, as some people consider slowness, but he is patient with you because he does not desire anyone to be destroyed but desires all to attain to repentance."
+        "text": "Jehová no es lento para cumplir su promesa, como algunas personas creen. Más bien, él es paciente con ustedes porque no desea que ninguno sea destruido, sino que todos lleguen a arrepentirse"
     },
     {
         "qid": 9,
@@ -317,7 +317,7 @@ var data_spanish = [
         "book": "Eclesiastés",
         "chapter": "9",
         "verse": "11",
-        "text": "time and unexpected events overtake them all"
+        "text": "a todos les llega algún mal momento y algún suceso imprevisto"
     },
     {
         "qid": 9,
@@ -325,7 +325,7 @@ var data_spanish = [
         "book": "Romanos",
         "chapter": "5",
         "verse": "12",
-        "text": "Through one man sin entered into the world and death through sin, and so death spread to all men because they had all sinned—."
+        "text": "Por medio de un solo hombre, el pecado entró en el mundo y por medio del pecado entró la muerte, y así fue como la muerte se extendió a todos los hombres, porque todos habían pecado..."
     },
     {
         "qid": 9,
@@ -333,7 +333,7 @@ var data_spanish = [
         "book": "1 Juan",
         "chapter": "3",
         "verse": "8",
-        "text": "For this purpose the Son of God was made manifest, to break up the works of the Devil."
+        "text": "El Hijo de Dios fue manifestado con este propósito: para deshacer las obras del Diablo"
     },
     {
         "qid": 9,
@@ -341,7 +341,7 @@ var data_spanish = [
         "book": "1 Juan",
         "chapter": "5",
         "verse": "19",
-        "text": "The whole world is lying in the power of the wicked one."
+        "text": "El mundo entero está bajo el poder del Maligno"
     },
     {
         "qid": 10,
@@ -349,7 +349,7 @@ var data_spanish = [
         "book": "Salmo",
         "chapter": "37",
         "verse": "29",
-        "text": "The righteous will possess the earth, and they will live forever on it."
+        "text": "Los justos heredarán la tierra y vivirán en ella para siempre"
     },
     {
         "qid": 10,
@@ -357,7 +357,7 @@ var data_spanish = [
         "book": "Eclesiastés",
         "chapter": "1",
         "verse": "4",
-        "text": "The earth remains forever."
+        "text": "La tierra permanecerá para siempre"
     },
     {
         "qid": 10,
@@ -365,7 +365,7 @@ var data_spanish = [
         "book": "Isaías",
         "chapter": "25",
         "verse": "8",
-        "text": "He will swallow up death forever, and the Sovereign Lord Jehovah will wipe away the tears from all faces."
+        "text": "Él eliminará la muerte para siempre, y el Señor Soberano Jehová secará las lágrimas de todos los rostros"
     },
     {
         "qid": 10,
@@ -373,7 +373,7 @@ var data_spanish = [
         "book": "Isaías",
         "chapter": "35",
         "verse": "5",
-        "text": "At that time the eyes of the blind will be opened, and the ears of the deaf will be unstopped."
+        "text": "En ese tiempo, los ojos de los ciegos serán abiertos y los oídos de los sordos serán destapados. En ese tiempo, el cojo trepará como un ciervo y la lengua del mudo gritará de alegría. Pues brotarán aguas en el desierto y torrentes en la llanura desértica"
     },
     {
         "qid": 10,
@@ -381,7 +381,7 @@ var data_spanish = [
         "book": "Apocalipsis",
         "chapter": "21",
         "verse": "4",
-        "text": "He will wipe out every tear from their eyes, and death will be no more, neither will mourning nor outcry nor pain be anymore. The former things have passed away."
+        "text": "Les secará toda lágrima de sus ojos, y la muerte ya no existirá, ni habrá más tristeza ni llanto ni dolor. Las cosas anteriores han desaparecido"
     },
     {
         "qid": 10,
@@ -389,7 +389,7 @@ var data_spanish = [
         "book": "Isaías",
         "chapter": "65",
         "verse": "21, 22",
-        "text": "They will build houses and live in them, and they will plant vineyards and eat their fruitage. They will not build for someone else to inhabit, nor will they plant for others to eat. For the days of my people will be like the days of a tree, and the work of their hands my chosen ones will enjoy to the full."
+        "text": "Construirán casas y vivirán en ellas; plantarán viñas y comerán su fruto. No construirán casas para que otros vivan en ellas ni plantarán para que otros coman. Porque los días de mi pueblo serán como los días de un árbol, y mis escogidos disfrutarán al máximo del fruto de su trabajo"
     },
     {
         "qid": 11,
@@ -397,7 +397,7 @@ var data_spanish = [
         "book": "Salmo",
         "chapter": "146",
         "verse": "4",
-        "text": "His spirit goes out, he returns to the ground; on that very day his thoughts perish."
+        "text": "Sale su espíritu, y el hombre vuelve al suelo; ese mismo día se acaban sus pensamientos"
     },
     {
         "qid": 11,
@@ -405,7 +405,7 @@ var data_spanish = [
         "book": "Eclesiastés",
         "chapter": "9",
         "verse": "5",
-        "text": "The living know that they will die, but the dead know nothing at all"
+        "text": "Porque los vivos saben que morirán, pero los muertos no saben nada en absoluto"
     },
     {
         "qid": 11,
@@ -413,7 +413,7 @@ var data_spanish = [
         "book": "Juan",
         "chapter": "11",
         "verse": "11",
-        "text": "[Jesus] added: ‘Lazarus our friend has fallen asleep, but I am traveling there to awaken him.’"
+        "text": "[Jesús] añadió: ‘Nuestro amigo Lázaro se ha dormido, pero voy para allá a despertarlo’"
     },
     {
         "qid": 12,
@@ -421,7 +421,7 @@ var data_spanish = [
         "book": "Juan",
         "chapter": "5",
         "verse": "28, 29",
-        "text": "Do not be amazed at this, for the hour is coming in which all those in the memorial tombs will hear his voice and come out"
+        "text": "No se asombren de esto, porque viene la hora en que todos los que están en las tumbas oirán su voz y saldrán"
     },
     {
         "qid": 12,
@@ -429,7 +429,7 @@ var data_spanish = [
         "book": "Hechos",
         "chapter": "24",
         "verse": "15",
-        "text": "There is going to be a resurrection of both the righteous and the unrighteous."
+        "text": "Va a haber una resurrección tanto de justos como de injustos"
     },
     {
         "qid": 12,
@@ -437,7 +437,7 @@ var data_spanish = [
         "book": "Apocalipsis",
         "chapter": "20",
         "verse": "13",
-        "text": "And the sea gave up the dead in it, and death and the Grave gave up the dead in them, and they were judged individually according to their deeds."
+        "text": "El mar entregó a los muertos que había en él, y la muerte y la Tumba entregaron a los muertos que había en ellas. Y cada uno fue juzgado por sus acciones"
     },
     {
         "qid": 13,
@@ -445,7 +445,7 @@ var data_spanish = [
         "book": "Proverbios",
         "chapter": "22",
         "verse": "29",
-        "text": "Have you seen a man skillful at his work? He will stand before kings; he will not stand before common men."
+        "text": "¿Has visto a un hombre hábil en su trabajo? Estará de pie delante de reyes, no delante de gente común"
     },
     {
         "qid": 13,
@@ -453,7 +453,7 @@ var data_spanish = [
         "book": "Efesios",
         "chapter": "4",
         "verse": "28",
-        "text": "Let the one who steals steal no more; rather, let him do hard work, doing good work with his hands, so that he may have something to share with someone in need."
+        "text": "Que el que roba ya no robe más, sino que trabaje duro haciendo con sus propias manos un buen trabajo y así tenga algo que dar a quien lo necesite"
     },
     {
         "qid": 13,
@@ -461,7 +461,7 @@ var data_spanish = [
         "book": "Eclesiastés",
         "chapter": "3",
         "verse": "13",
-        "text": "Everyone should eat and drink and find enjoyment for all his hard work. It is the gift of God."
+        "text": "Que todos coman y beban, y disfruten de todo su duro trabajo. Eso es un regalo de Dios"
     },
     {
         "qid": 14,
@@ -469,7 +469,7 @@ var data_spanish = [
         "book": "Proverbios",
         "chapter": "21",
         "verse": "17",
-        "text": "The one who loves having a good time will come to poverty; the one who loves wine and oil will not grow rich."
+        "text": "El que ama la diversión acabará en la pobreza; el que ama el vino y el aceite no se hará rico"
     },
     {
         "qid": 14,
@@ -477,7 +477,7 @@ var data_spanish = [
         "book": "Proverbios",
         "chapter": "22",
         "verse": "7",
-        "text": "The borrower is a slave to the lender."
+        "text": "El que pide prestado es esclavo del que presta"
     },
     {
         "qid": 14,
@@ -485,7 +485,7 @@ var data_spanish = [
         "book": "Lucas",
         "chapter": "14",
         "verse": "28",
-        "text": "Who of you wanting to build a tower does not first sit down and calculate the expense to see if he has enough to complete it?"
+        "text": "¿Quién de ustedes que quiere construir una torre no se sienta antes a calcular los gastos y ver si tiene suficiente para terminarla?"
     },
     {
         "qid": 14,
@@ -493,7 +493,7 @@ var data_spanish = [
         "book": "Juan",
         "chapter": "6",
         "verse": "12",
-        "text": "When they had eaten their fill, he said to his disciples: ‘Gather together the fragments left over, so that nothing is wasted.’"
+        "text": "Una vez que quedaron satisfechos, les dijo a sus discípulos: ‘Recojan los pedazos que sobraron, para que no se desperdicie nada’"
     },
     {
         "qid": 15,
@@ -501,7 +501,7 @@ var data_spanish = [
         "book": "Proverbios",
         "chapter": "15",
         "verse": "17",
-        "text": "Better is a dish of vegetables where there is love than a fattened bull where there is hatred."
+        "text": "Es mejor un plato de verduras donde hay amor que un toro engordado donde hay odio"
     },
     {
         "qid": 15,
@@ -509,7 +509,7 @@ var data_spanish = [
         "book": "Isaías",
         "chapter": "48",
         "verse": "17",
-        "text": "I, Jehovah, am your God, the One teaching you to benefit yourself, the One guiding you in the way you should walk."
+        "text": "Yo, Jehová, soy tu Dios, el que te enseña por tu propio bien, el que te guía por el camino en que debes andar"
     },
     {
         "qid": 15,
@@ -517,7 +517,7 @@ var data_spanish = [
         "book": "Mateo",
         "chapter": "5",
         "verse": "3",
-        "text": "Happy are those conscious of their spiritual need, since the Kingdom of the heavens belongs to them."
+        "text": "Felices los que reconocen sus necesidades espirituales, porque el Reino de los cielos es de ellos"
     },
     {
         "qid": 15,
@@ -525,7 +525,7 @@ var data_spanish = [
         "book": "Mateo",
         "chapter": "22",
         "verse": "39",
-        "text": "You must love your neighbor as yourself."
+        "text": "Ama a tu prójimo como te amas a ti mismo"
     },
     {
         "qid": 15,
@@ -533,7 +533,7 @@ var data_spanish = [
         "book": "Lucas",
         "chapter": "6",
         "verse": "31",
-        "text": "Just as you want men to do to you, do the same way to them."
+        "text": "Traten a los demás como les gustaría que los trataran a ustedes"
     },
     {
         "qid": 15,
@@ -541,7 +541,7 @@ var data_spanish = [
         "book": "Lucas",
         "chapter": "11",
         "verse": "28",
-        "text": "Happy are those hearing the word of God and keeping it!"
+        "text": "¡Felices los que oyen la palabra de Dios y la ponen en práctica!"
     },
     {
         "qid": 15,
@@ -549,7 +549,7 @@ var data_spanish = [
         "book": "Lucas",
         "chapter": "12",
         "verse": "15",
-        "text": "When a person has an abundance, his life does not result from the things he possesses."
+        "text": "Por mucho que uno tenga, las cosas que posee no le pueden dar la vida"
     },
     {
         "qid": 15,
@@ -557,7 +557,7 @@ var data_spanish = [
         "book": "1 Timoteo",
         "chapter": "6",
         "verse": "8",
-        "text": "So, having food and clothing, we will be content with these things."
+        "text": "Así pues, si tenemos comida y ropa, estemos contentos con eso"
     },
     {
         "qid": 15,
@@ -565,7 +565,7 @@ var data_spanish = [
         "book": "Hechos",
         "chapter": "20",
         "verse": "35",
-        "text": "There is more happiness in giving than there is in receiving."
+        "text": "Hay más felicidad en dar que en recibir"
     },
     {
         "qid": 16,
@@ -573,7 +573,7 @@ var data_spanish = [
         "book": "Salmo",
         "chapter": "55",
         "verse": "22",
-        "text": "Throw your burden on Jehovah, and he will sustain you. Never will he allow the righteous one to fall."
+        "text": "Arroja tu carga sobre Jehová, y él te sostendrá. Jamás permitirá que caiga el justo"
     },
     {
         "qid": 16,
@@ -581,14 +581,14 @@ var data_spanish = [
         "book": "Salmo",
         "chapter": "21",
         "verse": "5",
-        "text": "The plans of the diligent surely lead to success, but all who are hasty surely head for poverty."
+        "text": "Con toda seguridad, los planes del que es trabajador tendrán buenos resultados; en cambio, todo el que se precipita acabará en la pobreza"
     },
     {
         "qid": 16,
         "question": "¿Cómo manejar los problemas y preocupaciones?",
         "book": "Isaías",
         "chapter": "41",
-        "verse": "19",
+        "verse": "10",
         "text": "Do not be afraid, for I am with you. Do not be anxious, for I am your God. I will fortify you, yes, I will help you, I will really hold on to you with my right hand of righteousness."
     },
     {
@@ -597,7 +597,7 @@ var data_spanish = [
         "book": "Mateo",
         "chapter": "6",
         "verse": "27",
-        "text": "Who of you by being anxious can add one cubit to his life span?"
+        "text": "¿Quién de ustedes, por angustiarse, puede alargar un solo codo la duración de su vida?"
     },
     {
         "qid": 16,
@@ -605,7 +605,7 @@ var data_spanish = [
         "book": "Mateo",
         "chapter": "6",
         "verse": "34",
-        "text": "So never be anxious about the next day, for the next day will have its own anxieties. Each day has enough of its own troubles."
+        "text": "Así que nunca se angustien por el día siguiente, porque el día siguiente traerá sus propias preocupaciones. Bastante hay con los problemas de cada día"
     },
     {
         "qid": 16,
@@ -613,7 +613,7 @@ var data_spanish = [
         "book": "Filipenses",
         "chapter": "1",
         "verse": "10",
-        "text": "Make sure of the more important things."
+        "text": "Que se aseguren de qué cosas son las más importantes"
     },
     {
         "qid": 16,
@@ -621,7 +621,7 @@ var data_spanish = [
         "book": "Filipenses",
         "chapter": "4",
         "verse": "6, 7",
-        "text": "Do not be anxious over anything, but in everything by prayer and supplication along with thanksgiving, let your petitions be made known to God; and the peace of God that surpasses all understanding will guard your hearts and your mental powers by means of Christ Jesus."
+        "text": "No se angustien por nada. Más bien, en cualquier situación, mediante oraciones y ruegos y dando gracias, háganle saber a Dios sus peticiones, y la paz de Dios, que está más allá de lo que ningún ser humano puede entender, protegerá sus corazones y sus mentes por medio de Cristo Jesús"
     },
     {
         "qid": 17,
@@ -629,7 +629,7 @@ var data_spanish = [
         "book": "Efesios",
         "chapter": "5",
         "verse": "28",
-        "text": "In the same way husbands should love their wives as their own bodies."
+        "text": "Del mismo modo, los esposos deben amar a sus esposas como a sus propios cuerpos."
     },
     {
         "qid": 17,
@@ -637,7 +637,7 @@ var data_spanish = [
         "book": "Efesios",
         "chapter": "6",
         "verse": "4",
-        "text": "Fathers, do not be irritating your children, but go on bringing them up in the discipline and admonition of Jehovah."
+        "text": "Padres, no irriten a sus hijos, sino sigan criándolos de acuerdo con la disciplina y los consejos de Jehová"
     },
     {
         "qid": 17,
@@ -645,7 +645,7 @@ var data_spanish = [
         "book": "Efesios",
         "chapter": "5",
         "verse": "33",
-        "text": "The wife should have deep respect for her husband."
+        "text": "La esposa debe tenerle profundo respeto a su esposo"
     },
     {
         "qid": 17,
@@ -653,7 +653,7 @@ var data_spanish = [
         "book": "Colosenses",
         "chapter": "3",
         "verse": "18",
-        "text": "You wives, be in subjection to your husbands, as it is becoming in the Lord."
+        "text": "Esposas, estén en sujeción a sus esposos, como es apropiado en el Señor"
     },
     {
         "qid": 17,
@@ -661,7 +661,7 @@ var data_spanish = [
         "book": "Efesios",
         "chapter": "6",
         "verse": "1",
-        "text": "Children, be obedient to your parents in union with the Lord, for this is righteous."
+        "text": "Hijos, sean obedientes a sus padres en unión con el Señor, porque esto es justo."
     },
     {
         "qid": 17,
@@ -669,7 +669,7 @@ var data_spanish = [
         "book": "Colosenses",
         "chapter": "3",
         "verse": "20",
-        "text": "You children, be obedient to your parents in everything, for this is well-pleasing to the Lord."
+        "text": "Hijos, sean obedientes a sus padres en todo, porque eso le agrada al Señor"
     },
     {
         "qid": 18,
@@ -677,7 +677,7 @@ var data_spanish = [
         "book": "Salmo",
         "chapter": "65",
         "verse": "2",
-        "text": "O Hearer of prayer, to you people of all sorts will come."
+        "text": "A ti, el que escucha las oraciones, a ti acudirá gente de toda clase"
     },
     {
         "qid": 18,
@@ -685,7 +685,7 @@ var data_spanish = [
         "book": "Proverbios",
         "chapter": "3",
         "verse": "5",
-        "text": "Trust in Jehovah with all your heart, and do not rely on your own understanding."
+        "text": "Confía en Jehová con todo tu corazón y no te apoyes en tu propio entendimiento. Tómalo en cuenta en todos tus caminos, y él hará rectas tus sendas"
     },
     {
         "qid": 18,
@@ -693,7 +693,7 @@ var data_spanish = [
         "book": "Juan",
         "chapter": "17",
         "verse": "3",
-        "text": "This means everlasting life, their coming to know you, the only true God, and the one whom you sent, Jesus Christ."
+        "text": "Esto significa vida eterna: que lleguen a conocerte a ti, el único Dios verdadero, y a quien tú enviaste, Jesucristo"
     },
     {
         "qid": 18,
@@ -701,7 +701,7 @@ var data_spanish = [
         "book": "Hechos",
         "chapter": "17",
         "verse": "27",
-        "text": "In fact, [God] is not far off from each one of us."
+        "text": "Lo cierto es que él [Dios] no está muy lejos de cada uno de nosotros"
     },
     {
         "qid": 18,
@@ -709,7 +709,7 @@ var data_spanish = [
         "book": "Filipenses",
         "chapter": "1",
         "verse": "9",
-        "text": "This is what I continue praying, that your love may abound still more and more with accurate knowledge and full discernment."
+        "text": "Esto es lo que sigo pidiendo en mis oraciones: que el amor de ustedes se haga cada vez más abundante con conocimiento exacto y pleno discernimiento"
     },
     {
         "qid": 18,
@@ -717,7 +717,7 @@ var data_spanish = [
         "book": "Santiago",
         "chapter": "1",
         "verse": "5",
-        "text": "If any one of you is lacking in wisdom, let him keep asking God, for he gives generously to all and without reproaching, and it will be given him."
+        "text": "Si a alguno de ustedes le falta sabiduría, que se la pida constantemente a Dios, y la recibirá, porque él da generosamente a todos y sin reproches"
     },
     {
         "qid": 18,
@@ -725,7 +725,7 @@ var data_spanish = [
         "book": "Santiago",
         "chapter": "4",
         "verse": "8",
-        "text": "Draw close to God, and he will draw close to you. Cleanse your hands, you sinners, and purify your hearts, you indecisive ones."
+        "text": "Acérquense a Dios y él se acercará a ustedes. Límpiense las manos, pecadores, y purifiquen su corazón, indecisos"
     },
     {
         "qid": 18,
@@ -733,6 +733,6 @@ var data_spanish = [
         "book": "1 Juan",
         "chapter": "5",
         "verse": "3",
-        "text": "This is what the love of God means, that we observe his commandments; and yet his commandments are not burdensome."
+        "text": "El amor a Dios consiste en esto: en que obedezcamos sus mandamientos; y sus mandamientos no son una carga"
     }
 ]
