@@ -60,8 +60,8 @@ var data_english = [
         "question": "How can you learn about God?",
         "book": "Psalm",
         "chapter": "1",
-        "verse": "1-3",
-        "text": "Happy is the man who does not walk according to the advice of the wicked..., but his delight is in the law of Jehovah, and he reads His law in an undertone day and night....Everything he does will succeed."
+        "verse": "2",
+        "text": "his delight is in the law of Jehovah, and he reads His law in an undertone day and night"
     },
     {
         "qid": 2,
@@ -69,7 +69,7 @@ var data_english = [
         "book": "Acts",
         "chapter": "8",
         "verse": "30, 31",
-        "text": "Philip ran alongside and heard him reading aloud Isaiah the prophet, and he said: ‘Do you actually know what you are reading?’ He said: ‘Really, how could I ever do so unless someone guided me?’"
+        "text": "‘Do you actually know what you are reading?’ He said: ‘Really, how could I ever do so unless someone guided me?’"
     },
     {
         "qid": 2,

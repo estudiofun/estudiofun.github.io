@@ -29,6 +29,11 @@ var app = new Vue({
         this.setChapters();
         this.setVerses();
     },
+    computed: {
+      accuracy: function () {
+        return Math.round((this.totalCorrect / this.totalAttempts) * 100);
+      }
+    },
     methods: {
       nextQuestion: function () {
         this.currentIndex = this.currentIndex + 1;

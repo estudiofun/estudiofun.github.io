@@ -56,8 +56,10 @@
                 </div>
                 <button class="button button--medium" v-if="isCorrect" v-on:click="nextQuestion">Next</button>
                 <button class="button button--medium" v-if="isCorrect">Stop For Now, How Did I Do?</button>
-                <br />
-                <small style="font-size: 0.7rem;">{{ texto.book }} {{ texto.chapter }}:{{ texto.verse }} || {{ totalCorrect }} || {{ totalAttempts }} || {{ Math.round((totalCorrect / totalAttempts) * 100) }}</small>
+                <section class="accuracy" v-if="!Number.isNaN(accuracy)">
+                    Accuracy: {{ accuracy }}%
+                </section>
+                <small style="font-size: 0.7rem;">{{ texto.book }} {{ texto.chapter }}:{{ texto.verse }} || {{ totalCorrect }} || {{ totalAttempts }}</small>
             </section>
         </section>
     </main>
