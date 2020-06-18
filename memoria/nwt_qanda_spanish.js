@@ -298,7 +298,7 @@ var data_spanish = [
     {
         "qid": 8,
         "question": "¿Tiene Dios la culpa del sufrimiento?",
-        "book": "1 Peter",
+        "book": "1 Pedro",
         "chapter": "5",
         "verse": "7",
         "text": "Mientras echan todas sus inquietudes sobre él, porque él se preocupa por ustedes"
