@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
     <script src="nwt_qanda_english.js"></script>
+    <script src="nwt_qanda_spanish.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -24,11 +25,11 @@
                     <span class="texto__quote">&ldquo;</span>{{ texto.text }}<span class="texto__quote">&rdquo;</span>
                 </p>
             </section>
-            <section class="travel">
+            <!--<section class="travel">
                 <svg class="travel__boat" v-bind:class="{ 'travel__boat--correct': isCorrect }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 217.27" width="60"><g><g><path fill="#ccc" class="cls-1" d="M289,193.85H14.14c19.72-5.82,49.57-22.21,17-65.59a5.81,5.81,0,0,1,9-7.32l30.13,34.39a26.08,26.08,0,0,0,19.63,8.9h5.68v-19.3h10.06v19.3h48.92v-19.3h10.06v19.3h110a22.7,22.7,0,0,0,16.8-7.27c8.19-9,11.05-26.66-37.79-54.9a4,4,0,0,1,2-7.53h10.89a48.74,48.74,0,0,1,43.65,26.55c6,12,7.85,28.05-2.68,48.56A87,87,0,0,1,289,193.85Z"/><path fill="#ccc" class="cls-1" d="M273.5,205.28a89.19,89.19,0,0,1-44.69,12H11.13A11.13,11.13,0,0,1,0,206.13H0c0-.29,0-.57,0-.85Z"/><path fill="#ffffff" class="cls-1" d="M72.75,40.23h93.92a6.13,6.13,0,0,1,3.81,1.33c7.8,6.23,37.47,34.51,13.62,88.29a6.13,6.13,0,0,1-5.61,3.65H80.69A6.13,6.13,0,0,1,75,125.09c15-37.83,3.13-62.34-7-74.86a6.13,6.13,0,0,1,4.75-10Z"/><path fill="#ccc" class="cls-1" d="M122.65,2.41a8.23,8.23,0,0,1,14,5.82V28.8H120.24V8.23a8.21,8.21,0,0,1,2.41-5.82Z"/></g></g></svg>
-            </section>
+            </section>-->
             <section class="texto__select">
-                <p class="texto__text-prefix">Select Scripture</p>
+                <p class="texto__text-prefix">{{ texto.question }}</p>
                 <p class="citation">
                     <a href="#" v-on:click="currentSelection = 'book'" class="citation__book" v-bind:class="{ 'citation--active': currentSelection === 'book' }">{{ selectedBook }}</a>&nbsp;&nbsp;<a v-on:click="currentSelection = 'chapter'" href="#" class="citation__chapter" v-bind:class="{ 'citation--active': currentSelection === 'chapter' }">{{ selectedChapter }}</a><span class="citation__separator">:</span><a v-on:click="currentSelection = 'verse'" href="#" class="citation__verse" v-bind:class="{ 'citation--active': currentSelection === 'verse' }">{{ selectedVerse }}</a>
                 </p>
@@ -56,7 +57,7 @@
                 <button class="button button--medium" v-if="isCorrect" v-on:click="nextQuestion">Next</button>
                 <button class="button button--medium" v-if="isCorrect">Stop For Now, How Did I Do?</button>
                 <br />
-                <small>{{ texto.book }} {{ texto.chapter }}:{{ texto.verse }} || {{ totalCurrentIncorrect }}</small>
+                <small style="font-size: 0.7rem;">{{ texto.book }} {{ texto.chapter }}:{{ texto.verse }} || {{ totalCorrect }} || {{ totalAttempts }} || {{ Math.round((totalCorrect / totalAttempts) * 100) }}</small>
             </section>
         </section>
     </main>

@@ -1,4 +1,4 @@
-var textos = _.shuffle(data_english);
+var textos = _.shuffle(data_spanish);
 var startingIndex = 0;
 
 // after each selection show 'Another one...' or 'I'm done. How did I do?'
@@ -15,11 +15,13 @@ var app = new Vue({
       selectedBook: "?",
       selectedChapter: "?",
       selectedVerse: "?",
-      currentSelection: "",
+      currentSelection: "book",
       isCorrect: false,
       totalCorrect: 0,
       totalCurrentIncorrect: 0,
       currentHasBeenIncorrect: false,
+      totalCorrect: 0,
+      totalAttempts: 0,
       maxIncorrect: 3
     },
     created: function () {
@@ -36,10 +38,8 @@ var app = new Vue({
             this.selectedBook = "?";
             this.selectedChapter = "?";
             this.selectedVerse = "?";
-            this.currentSelection = "";
+            this.currentSelection = "book";
             this.isCorrect = false;
-            this.totalCurrentIncorrect = 0;
-            this.currentHasBeenIncorrect = false;
             this.setBooks();
             this.setChapters();
             this.setVerses();
@@ -58,20 +58,19 @@ var app = new Vue({
         this.verses = _.sortBy(_.concat(_.sampleSize(_.reject(_.uniq(_.map(textos, "verse")), function(o) { return o === currentVerse; }), 2), this.texto.verse));
       },
       checkAnswer: function() {
+          
+        this.totalAttempts = this.totalAttempts + 1;
 
-          if (this.selectedBook !== this.texto.book && this.selectedBook !== "?") {
-            this.totalCurrentIncorrect = this.totalCurrentIncorrect + 1;
-            currentHasBeenIncorrect = false;
+          if (this.selectedBook === this.texto.book && this.currentSelection === "book") {
+            this.totalCorrect = this.totalCorrect + 1;
+          } 
+
+          if (this.selectedChapter === this.texto.chapter && this.currentSelection === "chapter") {
+            this.totalCorrect = this.totalCorrect + 1;
           }
 
-          if (this.selectedChapter !== this.texto.chapter && this.selectedChapter !== "?") {
-            this.totalCurrentIncorrect = this.totalCurrentIncorrect + 1;
-            currentHasBeenIncorrect = false;
-          }
-
-          if (this.selectedVerse !== this.texto.verse && this.selectedVerse !== "?") {
-            this.totalCurrentIncorrect = this.totalCurrentIncorrect + 1;
-            currentHasBeenIncorrect = false;
+          if (this.selectedVerse === this.texto.verse && this.currentSelection === "verse") {
+            this.totalCorrect = this.totalCorrect + 1;
           }
 
           this.isCorrect = (this.selectedBook === this.texto.book && this.selectedChapter === this.texto.chapter && this.selectedVerse === this.texto.verse);
@@ -81,7 +80,15 @@ var app = new Vue({
           }
 
           if (!this.isCorrect) {
-            this.currentSelection = "";
+            if (this.currentSelection === "book" && this.selectedBook === this.texto.book) {
+              this.currentSelection = "chapter";
+            }
+            if (this.currentSelection === "chapter" && this.selectedChapter === this.texto.chapter) {
+              this.currentSelection = "verse";
+            }
+            if (this.currentSelection === "verse" && this.selectedVerse === this.texto.verse) {
+              this.currentSelection = "book";
+            }
           }
       }
     }
