@@ -42,7 +42,7 @@ var data_spanish = [
     {
         "qid": 2,
         "question": "¿Cómo puede usted conocer a Dios?",
-        "book": "Josue",
+        "book": "Josué",
         "chapter": "1",
         "verse": "8",
         "text": "Este libro de la Ley no debe apartarse de tu boca, y tienes que leerlo y meditar en él día y noche, a fin de que obedezcas cuidadosamente todo lo que está escrito en él; porque entonces te irá bien en tu camino y entonces actuarás con sabiduría"
@@ -50,7 +50,7 @@ var data_spanish = [
     {
         "qid": 2,
         "question": "¿Cómo puede usted conocer a Dios?",
-        "book": "Nehemiah",
+        "book": "Nehemías",
         "chapter": "8",
         "verse": "8",
         "text": "Y siguieron leyendo en voz alta el libro de la Ley del Dios verdadero y explicando con claridad lo que quería decir. Así ayudaron al pueblo a entender lo que se estaba leyendo"
