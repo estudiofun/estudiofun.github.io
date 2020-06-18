@@ -141,6 +141,7 @@ body {
     border: none;
     padding: .5rem;
     min-width: 100px;
+    background-color: #efefef;
 }
 
 .button--primary {
