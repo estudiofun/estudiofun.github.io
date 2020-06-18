@@ -68,6 +68,9 @@ var app = new Vue({
             this.setChapters();
             this.setVerses();
         }
+        else {
+          this.isFinished = true;
+        }
       },
       setBooks: function () {
         var currentBook = this.texto.book;
