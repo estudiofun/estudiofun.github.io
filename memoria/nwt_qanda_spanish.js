@@ -130,7 +130,7 @@ var data_spanish = [
     {
         "qid": 3,
         "question": "¿Quién escribió la Biblia?",
-        "book": "1 Timoteo",
+        "book": "2 Timoteo",
         "chapter": "3",
         "verse": "16",
         "text": "Toda la Escritura está inspirada por Dios y es útil para enseñar"

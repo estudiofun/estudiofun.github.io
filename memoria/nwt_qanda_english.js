@@ -130,7 +130,7 @@ var data_english = [
     {
         "qid": 3,
         "question": "Who wrote the Bible?",
-        "book": "1 Timothy",
+        "book": "2 Timothy",
         "chapter": "3",
         "verse": "16",
         "text": "All Scripture is inspired of God and beneficial for teaching."

@@ -50,6 +50,8 @@ var app = new Vue({
         this.setBooks();
         this.setChapters();
         this.setVerses();
+
+        console.log(this.textos);
       },
       getLiteral: function(id) {
         return _.find(literals, { 'id': id })[this.currentLanguage];
