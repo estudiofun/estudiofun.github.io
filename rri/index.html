@@ -17,10 +17,10 @@
 <body>
     <main id="game">
         <div class="dice-container">
-            <img v-bind:src="'images/' + roll1" width="64" class="dice" /> 
-            <img v-bind:src="'images/' + roll2" width="64" class="dice" /> 
-            <img v-bind:src="'images/' + roll3" width="64" class="dice" /> 
-            <img v-bind:src="'images/' + roll4" width="64" class="dice" /> 
+            <img v-bind:src="'images/' + roll1" width="64" height="64" class="dice" /> 
+            <img v-bind:src="'images/' + roll2" width="64" height="64" class="dice" /> 
+            <img v-bind:src="'images/' + roll3" width="64" height="64" class="dice" /> 
+            <img v-bind:src="'images/' + roll4" width="64" height="64" class="dice" /> 
         </div>
         <button class="roll-button" v-on:click="roll">Roll</button>
         <br /><br />
