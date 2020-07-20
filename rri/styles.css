@@ -1,0 +1,25 @@
+body {
+    font-size: 16px;
+}
+
+.dice-container {
+    display: flex;
+}
+
+.dice {
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.dice + .dice {
+    margin-left: 8px;
+}
+
+.roll-button {
+    padding: .5rem;
+    margin-top: 1rem;
+    font-size: 1.125rem;
+}
