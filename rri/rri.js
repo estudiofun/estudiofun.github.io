@@ -1,7 +1,7 @@
 // initialize dice
-var dice1 = ['train-s.png','road-t.png','road-s.png','train-t.png','road-c.png','train-c.png'];
-var dice2 = ['road-s.png','road-t.png','train-s.png','train-t.png','road-c.png','train-c.png'];
-var dice3 = ['train-s.png','train-t.png','road-s.png','road-t.png','road-c.png','train-c.png'];
+var dice1 = ['train-s.png','train-t.png','road-s.png','road-t.png','train-c.png','road-c.png'];
+var dice2 = ['train-s.png','train-t.png','road-s.png','road-t.png','train-c.png','road-c.png'];
+var dice3 = ['train-s.png','train-t.png','road-s.png','road-t.png','train-c.png','road-c.png'];
 var dice4 = ['road-train-s.png','road-train-l.png','road-train-s.png','road-train-l.png','road-train-c.png', 'road-train-c.png'];
 
 var app = new Vue({
