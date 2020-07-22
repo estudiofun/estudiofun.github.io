@@ -20,10 +20,15 @@
             <img v-bind:src="'images/' + roll1" width="64" height="64" class="dice" /> 
             <img v-bind:src="'images/' + roll2" width="64" height="64" class="dice" /> 
             <img v-bind:src="'images/' + roll3" width="64" height="64" class="dice" /> 
-            <img v-bind:src="'images/' + roll4" width="64" height="64" class="dice" /> 
+            <img v-bind:src="'images/' + roll4" width="64" height="64" class="dice" />
+            <img v-bind:src="'images/' + roll5" width="64" height="64" class="dice" v-if="useLakes" />
+            <img v-bind:src="'images/' + roll6" width="64" height="64" class="dice" v-if="useLakes" /> 
         </div>
         <button class="roll-button" v-on:click="roll">Roll</button>
         <br /><br />
+        <input type="checkbox" id="lakes" v-model="useLakes" />&nbsp;<label for="lakes">use lake dice</label>
+        <br /><br />
+        <hr />
         <a href="rri_board.pdf" class="print-board" target="_new">board pdf (b&w)</a>&nbsp;<span class="print-board">|</span>&nbsp;<a href="rri_board_color.pdf" class="print-board" target="_new">board pdf (color)</a>&nbsp;<span class="print-board">|</span>&nbsp;<a href="https://www.horrible-games.com/wp-content/uploads/2018/07/RRI_BLU_Rulebook_ENG_v05_light.pdf" class="print-board" target="_new">official rules</a>
     </main>
 </body>

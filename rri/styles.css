@@ -28,3 +28,8 @@ body {
 .print-board {
     font-size: 12px;
 }
+
+hr {
+    border: 1px solid #ccc;
+    height: 1px;
+}
