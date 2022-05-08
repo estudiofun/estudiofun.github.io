@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extended Biblical Timeline</title>
+    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+
+    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/fonts/font.playfair-faunaone.css">
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+    <style>
+        /* .tl-timeline {
+            font-family: 'Roboto', sans-serif;
+        } */
+        
+        .tl-timeline h2 {
+            font-size: 40px;
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline {
+            font-size: 16px;
+            line-height: 16px;
+        }
+        
+        .tl-text .tl-headline-date, .tl-text h3.tl-headline-date {
+            padding: 5px;
+            font-size: 22px;
+            line-height: 22px;
+            border: solid 1px #ccc;
+            display: inline-block;
+            margin-bottom: 10px;
+            margin-left: -30px;
+            color: #333;
+        }
+        
+        .tl-timeline p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id='biblical-timeline' style="width: 100%; height: 600px"></div>
+    <script>
+        
+        var events = [
+                    {
+                        "date": 4026,
+                        "epoch": "B.C.E.",
+                        "event": "Adam’s creation"
+                    },
+                    {
+                        "date": 3096,
+                        "epoch": "B.C.E.",
+                        "event": "Death of Adam"
+                    },
+                    {
+                        "date": 2970,
+                        "epoch": "B.C.E.",
+                        "event": "Noah born"
+                    },
+                    {
+                        "date": 2470,
+                        "epoch": "B.C.E.",
+                        "event": "Japheth is born"
+                    },
+                    {
+                        "date": 2370,
+                        "epoch": "B.C.E.",
+                        "event": "Floodwaters fall"
+                    },
+                    {
+                        "date": 2150,
+                        "epoch": "B.C.E.",
+                        "event": "Babel is built, languages confused and people are dispersed",
+                        "details": "sometime between 2269 and 2030 B.C.E., the time in which Peleg lived (Gen 10:25) - The population is in the thousands (at least 4,000 adult males) - Descendents of Ham found Egypt, descendents of Shem (Asshur) found Assyria, Nimrod (son of Cush, descendant of Ham) founds Babylon. The Japhethites (descendents of Japheth are the source of the Aryan and Indo-European/Indo-Germanic people) moving N and W of the fertile crescent"
+                    },
+                    {
+                        "date": 2020,
+                        "epoch": "B.C.E.",
+                        "event": "Noah dies"
+                    },
+                    {
+                        "date": 2018,
+                        "epoch": "B.C.E.",
+                        "event": "Abraham born"
+                    },
+                    {
+                        "date": 1943,
+                        "epoch": "B.C.E.",
+                        "event": "Abrahamic covenant"
+                    },
+                    {
+                        "date": 1881,
+                        "epoch": "B.C.E.",
+                        "event": "Sarah dies"
+                    },
+                    {
+                        "date": 1878,
+                        "epoch": "B.C.E.",
+                        "event": "Isaac and Rebecca marry"
+                    },
+                    {
+                        "date": 1868,
+                        "epoch": "B.C.E.",
+                        "event": "Shem dies"
+                    },
+                    {
+                        "date": 1843,
+                        "epoch": "B.C.E.",
+                        "event": "Abraham dies",
+                        "details": "Jacob is 15 years old"
+                    },
+                    {
+                        "date": 1761,
+                        "epoch": "B.C.E.",
+                        "event": "Jacob contends with an angel, receives the name 'Israel'"
+                    },
+                    {
+                        "date": 1750,
+                        "epoch": "B.C.E.",
+                        "event": "Joseph sold as a slave"
+                    },
+                    {
+                        "date": 1728,
+                        "epoch": "B.C.E.",
+                        "event": "Jacob (Israel) and family move to Egypt"
+                    },
+                    {
+                        "date": 1613,
+                        "epoch": "B.C.E.",
+                        "event": "Job's trial",
+                        "details": "before 1613 B.C.E. Job was a relative of Abraham, distant cousins of the then-in-Egypt Israelites (Job was a descendant of Shem)"
+                    },
+                    {
+                        "date": 1593,
+                        "epoch": "B.C.E.",
+                        "event": "Moses is born",
+                        "details": "three months later placed on the Nile river"
+                    },
+                    {
+                        "date": 1553,
+                        "epoch": "B.C.E.",
+                        "event": "Moses leaves Egypt",
+                        "details": "40 years old when leaves, another 40 years as a shepherd before returning"
+                    },
+                    {
+                        "date": 1513,
+                        "epoch": "B.C.E.",
+                        "event": "Exodus from Egypt",
+                        "details": "The Israelites had spent 215 years actually living in Egypt, growing to a population of 600,000 adult males"
+                    },
+                    {
+                        "date": 1513,
+                        "epoch": "B.C.E.",
+                        "event": "Moses completes Genesis while in the wilderness of Sinai"
+                    },
+                    {
+                        "date": 1512,
+                        "epoch": "B.C.E.",
+                        "event": "Moses completes the books of Exodus and Leviticus"
+                    },
+                    {
+                        "date": 1473,
+                        "epoch": "B.C.E.",
+                        "event": "Moses completes the books of Numbers, Deuteronomy, and Job",
+                        "details": "The book of Job covers over 140 years between 1657 to 1473."
+                    },
+                    {
+                        "date": 1473,
+                        "epoch": "B.C.E.",
+                        "event": "Israel enters Canaan under Joshua"
+                    },
+                    {
+                        "date": 1467,
+                        "epoch": "B.C.E.",
+                        "event": "Major conquest of Canaan completed"
+                    },
+                    {
+                        "date": 1450,
+                        "epoch": "B.C.E.",
+                        "event": "Joshua completes the book of Joshua",
+                        "details": "the book of Joshua covers 1473-1450"
+                    },
+                    {
+                        "date": 1117,
+                        "epoch": "B.C.E.",
+                        "event": "Saul anointed as king",
+                        "details": "later made king of all the tribes, after Ishbosheth's assassination"
+                    },
+                    {
+                        "date": 1100,
+                        "epoch": "B.C.E.",
+                        "event": "Samuel completes the book of Judges",
+                        "details": "the book of Judges covers 1450-1120"
+                    },
+                    {
+                        "date": 1090,
+                        "epoch": "B.C.E.",
+                        "event": "Samuel completes the book of Ruth",
+                        "details": "the book of Ruth covers 12 years of Judges' rule"
+                    },
+                    {
+                        "date": 1078,
+                        "epoch": "B.C.E.",
+                        "event": "Samuel, Gad, and Nathan complete 1 Samuel",
+                        "details": "1 Samuel covers 1180-1078"
+                    },
+                    {
+                        "date": 1077,
+                        "epoch": "B.C.E.",
+                        "event": "David made king of Judah"
+                    },
+                    {
+                        "date": 1070,
+                        "epoch": "B.C.E.",
+                        "event": "God makes promise to David"
+                    },
+                    {
+                        "date": 1040,
+                        "epoch": "B.C.E.",
+                        "event": "Gad and Nathan complete 2 Samuel",
+                        "details": "2 Samuel covers 1077-1040"
+                    },
+                    {
+                        "date": 1037,
+                        "epoch": "B.C.E.",
+                        "event": "Solomon becomes king"
+                    },
+                    {
+                        "date": 1034,
+                        "epoch": "B.C.E.",
+                        "event": "Temple construction begins"
+                    },
+                    {
+                        "date": 1027,
+                        "epoch": "B.C.E.",
+                        "event": "Temple in Jerusalem completed"
+                    },
+                    {
+                        "date": 1020,
+                        "epoch": "B.C.E.",
+                        "event": "Song of Solomon completed",
+                        "details": "circa 1020 B.C.E."
+                    },
+                    {
+                        "date": 1000,
+                        "epoch": "B.C.E.",
+                        "event": "Solomon completes the book of Ecclesiastes"
+                    },
+                    {
+                        "date": 997,
+                        "epoch": "B.C.E.",
+                        "event": "Israel is divided into two kingdoms",
+                        "details": "Rehoboam listens to his peers, not the wiser older men"
+                    },
+                    {
+                        "date": 844,
+                        "epoch": "B.C.E.",
+                        "event": "Jonah completes the book of Jonah",
+                        "details": "Jonah prophecies to the people of Nineveh, the capital (and possibly the area around the capital) of Assyria, who repent but 100 years later seige Samaria"
+                    },
+                    {
+                        "date": 820,
+                        "epoch": "B.C.E.",
+                        "event": "Joel completes the book of Joel"
+                    },
+                    {
+                        "date": 804,
+                        "epoch": "B.C.E.",
+                        "event": "Amos completes the book of Amos"
+                    },
+                    {
+                        "date": 745,
+                        "epoch": "B.C.E.",
+                        "event": "Hosea completes the book of Hosea",
+                        "details": "The book of Hosea covers 804-745"
+                    },
+                    {
+                        "date": 740,
+                        "epoch": "B.C.E.",
+                        "event": "Samaria falls to the Assyrians",
+                        "details": "in Hezekiah's sixth year, however messages of prophets still includes the people of the Northern Kingdom"
+                    },
+                    {
+                        "date": 732,
+                        "epoch": "B.C.E.",
+                        "event": "Isaiah completes the book of Isaiah",
+                        "details": "The book of Isaiah covers 778-732. Identifies Cyrus as overthrowing Babylon nearly 200 years in advance."
+                    },
+                    {
+                        "date": 717,
+                        "epoch": "B.C.E.",
+                        "event": "Compiling of Proverbs is completed",
+                        "details": "circa 717 B.C.E."
+                    },
+                    {
+                        "date": 717,
+                        "epoch": "B.C.E.",
+                        "event": "Micah completes the book of Micah",
+                        "details": "The book of Micah covers 777-717"
+                    },
+                    {
+                        "date": 648,
+                        "epoch": "B.C.E.",
+                        "event": "Zephaniah completes the book of Zephaniah"
+                    },
+                    {
+                        "date": 632,
+                        "epoch": "B.C.E.",
+                        "event": "Nahum completes the book of Nahum"
+                    },
+                    {
+                        "date": 628,
+                        "epoch": "B.C.E.",
+                        "event": "Habakkuk completes the book of Habakkuk"
+                    },
+                    {
+                        "date": 617,
+                        "epoch": "B.C.E.",
+                        "event": "Teenaged Daniel taken into exile in Babylon"
+                    },
+                    {
+                        "date": 607,
+                        "epoch": "B.C.E.",
+                        "event": "Jerusalem destroyed; exile in Babylon begins"
+                    },
+                    {
+                        "date": 607,
+                        "epoch": "B.C.E.",
+                        "event": "Jeremiah completes the book of Lamentations",
+                        "details": "written by Jeremiah immediately after the destruction. Notes the rightness of what Jehovah has done."
+                    },
+                    {
+                        "date": 607,
+                        "epoch": "B.C.E.",
+                        "event": "Obadiah completes the book of Obadiah",
+                        "details": "condemns the Edomites for how they treated their brothers the Jews upon the destruction of Jerusalem, and prophecies of restoration"
+                    },
+                    {
+                        "date": 591,
+                        "epoch": "B.C.E.",
+                        "event": "Ezekiel completes the book of Ezekiel",
+                        "details": "The book of Ezekiel covers 613-591"
+                    },
+                    {
+                        "date": 580,
+                        "epoch": "B.C.E.",
+                        "event": "Jeremiah completes the books of 1 and 2 Kings and the book of Jeremiah",
+                        "details": "1 and 2 Kings cover 1040-580, the book of Jeremiah covers 647-580"
+                    },
+                    {
+                        "date": 539,
+                        "epoch": "B.C.E.",
+                        "event": "Babylon falls to the conqueror Cyrus",
+                        "details": "Daniel interprets writing on the wall"
+                    },
+                    {
+                        "date": 537,
+                        "epoch": "B.C.E.",
+                        "event": "Jewish exiles return to Babylon, led by Zerubbabel",
+                        "details": "70 year exile ends"
+                    },
+                    {
+                        "date": 536,
+                        "epoch": "B.C.E.",
+                        "event": "Daniel is visited by Gabriel and receives vision of march of world powers",
+                        "details": "Gabriel contended with the prince of Persia. Vision starts with the kings of Persia. This occurs in the 3rd year of Cyrus."
+                    },
+                    {
+                        "date": 536,
+                        "epoch": "B.C.E.",
+                        "event": "Daniel completes the book of Daniel",
+                        "details": "The book of Daniel covers 618-536"
+                    },
+                    {
+                        "date": 522,
+                        "epoch": "B.C.E.",
+                        "event": "Official ban on temple construction",
+                        "details": "Artaxerxes convinced by non-Jews (people of the cities of Samaria) to ban construction"
+                    },
+                    {
+                        "date": 520,
+                        "epoch": "B.C.E.",
+                        "event": "Zechariah and Haggai encourage people to resume construction, despite ban",
+                        "details": "second year of Darius I, Darius orders a search and finds Cyrus' decree."
+                    },
+                    {
+                        "date": 520,
+                        "epoch": "B.C.E.",
+                        "event": "Haggai completes the book of Haggai."
+                    },
+                    {
+                        "date": 518,
+                        "epoch": "B.C.E.",
+                        "event": "Zechariah completes the book of Zechariah",
+                        "details": "The book of Zechariah covers 520-518"
+                    },
+                    {
+                        "date": 515,
+                        "epoch": "B.C.E.",
+                        "event": "Temple work completed, Passover and Festival of Unfermented Cakes"
+                    },
+                    {
+                        "date": 475,
+                        "epoch": "B.C.E.",
+                        "event": "Jehovah uses Queen Esther to liberate the Jews from genocide.",
+                        "details": "Ahasuerus (possibly Xerxes I) was likely the Persian king and Esther's husband, living in the Persian capital of the time, Shushan. Xerxes I also appears to be the 'fourth king' mentioned at Daniel 11:2, after Cyrus the Great, Cambyses II, and Darius Hystaspis (Xerxes I father)"
+                    },
+                    {
+                        "date": 475,
+                        "epoch": "B.C.E.",
+                        "event": "Mordecai completes the book of Esther",
+                        "details": "The book of Esther covers 493-475"
+                    },
+                    {
+                        "date": 468,
+                        "epoch": "B.C.E.",
+                        "event": "Ezra returns to Jerusalem and is dismayed by the sin committed by the people"
+                    },
+                    {
+                        "date": 460,
+                        "epoch": "B.C.E.",
+                        "event": "Ezra completes the books of 1 and 2 Chronicles and the book of Ezra",
+                        "details": "1 and 2 Chronicles cover 1077-537, Ezra covers 537-467"
+                    },
+                    {
+                        "date": 460,
+                        "epoch": "B.C.E.",
+                        "event": "The book of Psalms is completed",
+                        "details": "Psalms appears to be actually 5 collections of 150 sacred songs written over 1,000 years from the time of Moses till after the return of the Jews from Baylonian exile."
+                    },
+                    {
+                        "date": 456,
+                        "epoch": "B.C.E.",
+                        "event": "Nehemiah, working as a cupbearer, visited by his brother Hanani and others from Judah",
+                        "details": "cupbearer for Artaxerxes (Longimanus), a different Artaxerxes than the one that ordered the ban. Possibly in Shushan (the same city Esther lived in)"
+                    },
+                    {
+                        "date": 455,
+                        "epoch": "B.C.E.",
+                        "event": "Jerusalem's walls rebuilt; 69 weeks of years begin",
+                        "details": "Nehemiah receives word to rebuild Jerusalem's walls"
+                    },
+                    {
+                        "date": 443,
+                        "epoch": "B.C.E.",
+                        "event": "Malachi completes his prophetic book, Nehemiah completes his book",
+                        "details": "After 443 B.C.E. Nehemiah returns to find the deplorable spiritual conditions (Nehemiah chapter 13). The book of Nehemiah covers 456-443. Both Malachi and Nehemiah were completed some time after 443."
+                    },
+                    {
+                        "date": 332,
+                        "epoch": "B.C.E.",
+                        "event": "Alexandar the Great marches through Judah",
+                        "details": "Jewish tradition, as recorded by Josephus, holds that the Jewish high priest showed Alexandar the prophecies of Daniel fortelling the lightning conquests of Greece."
+                    },
+                    {
+                        "date": 198,
+                        "epoch": "B.C.E.",
+                        "event": "Antiochus the Great captures Jerusalem",
+                        "details": "Jerusalem comes under Seleucid (the Greek empire segment from Seleucs I Nicator) control"
+                    },
+                    {
+                        "date": 168,
+                        "epoch": "B.C.E.",
+                        "event": "Antiochus IV attempts to Hellenize (bring under Greek culture) the Jews with a profane sacrifice",
+                        "details": "An altar to Zeus is placed in the temple and Jews are required to sacrifice swine flesh to the gods of the Greeks. This leads to the Maccabean revolt. It is possible Jehovah used the Maccabees (Macabee meaning 'hammer', and given to Judas son of Mattathias, but later came to given to the whole family) to restore temple worship so that Messianic prophecies regarding the temple could be fulfilled. However, we cannot know for sure."
+                    },
+                    {
+                        "date": 165,
+                        "epoch": "B.C.E.",
+                        "event": "The Jews retake Jerusalem under Judas Maccabaeus, rededicate Jehovah's altar",
+                        "details": "This is commemerated by the modern Jews as Hanukkah, the festival of dedication. This is mentioned at John 10:22,23 ('the Festival of Dedication' : chanuk-kah)"
+                    },
+                    {
+                        "date": 160,
+                        "epoch": "B.C.E.",
+                        "event": "The Jews appeal to Rome for help",
+                        "details": "The Jews come under Roman power"
+                    },
+                    {
+                        "date": 63,
+                        "epoch": "B.C.E.",
+                        "event": "Roman forces beseige Jerusalem for 3 months to enter the city and settle internal disputes",
+                        "details": "Internal disputes and rival religious factions (Pharisees, Sadducees, Zealots, and others) weaken the city"
+                    },
+                    {
+                        "date": 37,
+                        "epoch": "B.C.E.",
+                        "event": "Herod the Great gains control of Jerusalem",
+                        "details": "36 or 37"
+                    },
+                    {
+                        "date": 3,
+                        "epoch": "B.C.E.",
+                        "event": "Zechariah receives angelic word of the birth of his son, John"
+                    },
+                    {
+                        "date": 2,
+                        "epoch": "B.C.E.",
+                        "event": "Mary receives angelic word from Gabriel regarding the upcoming miraculous birth of Jesus"
+                    },
+                    {
+                        "date": 2,
+                        "epoch": "B.C.E.",
+                        "event": "Birth of Jesus"
+                    },
+                    {
+                        "date": 29,
+                        "epoch": "C.E.",
+                        "event": "John the Baptizer begins his ministry",
+                        "details": "6 months before Jesus begins his ministry"
+                    },
+                    {
+                        "date": 29,
+                        "epoch": "C.E.",
+                        "event": "Jesus is baptized and begins to preach about God's Kingdom",
+                        "details": "69 weeks of years ends"
+                    },
+                    {
+                        "date": 31,
+                        "epoch": "C.E.",
+                        "event": "Jesus chooses his 12 apostles; delivers Sermon on the Mount"
+                    },
+                    {
+                        "date": 32,
+                        "epoch": "C.E.",
+                        "event": "Jesus resurrects Lazarus"
+                    },
+                    {
+                        "date": 33,
+                        "epoch": "C.E.",
+                        "event": "Jesus is impaled",
+                        "details": "Nisan 14, which corresponds to part of March and part of April"
+                    },
+                    {
+                        "date": 33,
+                        "epoch": "C.E.",
+                        "event": "Jesus is resurrected",
+                        "details": "Nisan 16"
+                    },
+                    {
+                        "date": 33,
+                        "epoch": "C.E.",
+                        "event": "Pentecost; outpouring of holy spirit",
+                        "details": "Sivan 6, which corresponds to part of May and part of June"
+                    },
+                    {
+                        "date": 36,
+                        "epoch": "C.E.",
+                        "event": "Cornelius becomes a Christian"
+                    },
+                    {
+                        "date": 41,
+                        "epoch": "C.E.",
+                        "event": "Matthew completes his gospel"
+                    },
+                    {
+                        "date": 44,
+                        "epoch": "C.E.",
+                        "event": "James, brother of John, dies and becomes the first apostle to die as a martyr"
+                    },
+                    {
+                        "date": 47,
+                        "epoch": "C.E.",
+                        "event": "Paul's first preaching tour",
+                        "details": "circa 47-48 C.E."
+                    },
+                    {
+                        "date": 49,
+                        "epoch": "C.E.",
+                        "event": "Paul's second preaching tour",
+                        "details": "circa 49-52 C.E."
+                    },
+                    {
+                        "date": 50,
+                        "epoch": "C.E.",
+                        "event": "Paul's writes his first letter to the Thessalonians"
+                    },
+                    {
+                        "date": 51,
+                        "epoch": "C.E.",
+                        "event": "Paul's writes his second letter to the Thessalonians"
+                    },
+                    {
+                        "date": 51,
+                        "epoch": "C.E.",
+                        "event": "Paul writes his letter to the Galations",
+                        "details": "circa 50-52 C.E."
+                    },
+                    {
+                        "date": 52,
+                        "epoch": "C.E.",
+                        "event": "Paul's third preaching tour",
+                        "details": "circa 52-56 C.E."
+                    },
+                    {
+                        "date": 55,
+                        "epoch": "C.E.",
+                        "event": "Paul writes his first and second letters to the Corinthians"
+                    },
+                    {
+                        "date": 57,
+                        "epoch": "C.E.",
+                        "event": "Luke completes his gospel account",
+                        "details": "cerca 56-58 C.E."
+                    },
+                    {
+                        "date": 56,
+                        "epoch": "C.E.",
+                        "event": "Paul writes his letter to the Romans",
+                        "details": "Paul writes while in Corinth"
+                    },
+                    {
+                        "date": 60,
+                        "epoch": "C.E.",
+                        "event": "Paul writes letters while imprisoned in Rome (Ephesians, Philippians, Colossians, Philemon)",
+                        "details": "circa 60-61 C.E."
+                    },
+                    {
+                        "date": 61,
+                        "epoch": "C.E.",
+                        "event": "Paul writes letters to the Hebrews"
+                    },
+                    {
+                        "date": 62,
+                        "epoch": "C.E.",
+                        "event": "Jesus' half brother James writes his letter",
+                        "details": "before 62 C.E."
+                    },
+                    {
+                        "date": 62,
+                        "epoch": "C.E.",
+                        "event": "Paul writes first letter to Timothy",
+                        "details": "between 61 and 64 C.E."
+                    },
+                    {
+                        "date": 63,
+                        "epoch": "C.E.",
+                        "event": "Mark completes his gospel",
+                        "details": "between 60 and 65 C.E. - John Mark was likely the young man who left his outer garment and fled when Jesus was arrested, and also was the Mark over whom an argument erupted between Paul and Barnabas."
+                    },
+                    {
+                        "date": 64,
+                        "epoch": "C.E.",
+                        "event": "Peter writes second letter",
+                        "details": "between 62 and 64 C.E."
+                    },
+                    {
+                        "date": 65,
+                        "epoch": "C.E.",
+                        "event": "Paul writes second letter to Timothy",
+                        "details": "Paul had already likely died by the time Timothy receives the letter"
+                    },
+                    {
+                        "date": 65,
+                        "epoch": "C.E.",
+                        "event": "Jude writes his letter"
+                    },
+                    {
+                        "date": 66,
+                        "epoch": "C.E.",
+                        "event": "Jews revolt against Rome"
+                    },
+                    {
+                        "date": 70,
+                        "epoch": "C.E.",
+                        "event": "Jerusalem and its temple destroyed by the Romans"
+                    },
+                    {
+                        "date": 96,
+                        "epoch": "C.E.",
+                        "event": "John writes Revelation",
+                        "details": "circa 96 C.E."
+                    },
+                    {
+                        "date": 98,
+                        "epoch": "C.E.",
+                        "event": "John writes three letters and his gospel account"
+                    },
+                    {
+                        "date": 100,
+                        "epoch": "C.E.",
+                        "event": "Death of John, the last of the apostles",
+                        "details": "circa 100 C.E."
+                    }
+                ];   
+                
+                var shaped_events = events.map(function(event) {
+                    var shaped_event = {};
+                    shaped_event.start_date = {};
+                    shaped_event.start_date.year = event.epoch === 'B.C.E.' ? event.date * -1 : event.date;
+                    
+                    shaped_event.text = {};
+                    shaped_event.text.headline = event.event;
+                    if (event.details) shaped_event.text.text = event.details.replace(' - ', '<br /><br />');
+                    return shaped_event;
+                });
+                
+                     
+        var timeline_json = {
+            
+            title: {
+                text: {
+                    headline: 'An Extended Biblical Timeline',
+                    text: 'from the creation of the first man Adam to the death of the Apostle John',
+                    media: {
+                        url: 'writing1.jpg'
+                    }
+                }
+            },
+            events: shaped_events
+            
+        };
+        
+        
+        // The TL.Timeline constructor takes at least two arguments:
+        // the id of the Timeline container (no '#'), and
+        // the URL to your JSON data file or Google spreadsheet.
+        // the id must refer to an element "above" this code,
+        // and the element must have CSS styling to give it width and height
+        // optionally, a third argument with configuration options can be passed.
+        // See below for more about options.
+        timeline = new TL.Timeline('biblical-timeline', timeline_json, {}); 
+    </script>
+</body>
+</html>
