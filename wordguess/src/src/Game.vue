@@ -136,7 +136,7 @@ function completeRow() {
             document.execCommand("copy");
             window.getSelection().removeAllRanges();
           }
-        });
+        }, 1000);
 
         gameover = true
         link_url = 'https://www.jw.org/en/library/books/Insight-on-the-Scriptures/' + answer;
@@ -205,7 +205,7 @@ function genResultGrid() {
     </div>
   </Transition>
   <header>
-    <h1>Word Guess</h1>
+    <h1>Insight Word</h1>
   </header>
   <div id="board">
     <div
