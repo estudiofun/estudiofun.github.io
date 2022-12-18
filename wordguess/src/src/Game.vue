@@ -54,6 +54,10 @@ function onKey(key: string) {
   }
 }
 
+function isOS() {
+  return navigator.userAgent.match(/ipad|iphone/i);
+}
+
 function fillTile(letter: string) {
   for (const tile of currentRow) {
     if (!tile.letter) {
@@ -122,20 +126,20 @@ function completeRow() {
           -1
         )
 
-        setTimeout(() => {
-          if (document.selection) {
-            var range = document.body.createTextRange();
-            range.moveToElementText(document.getElementById("grid"));
-            range.select().createTextRange();
-            document.execCommand("copy");
-            document.selection.empty();
-          } else if (window.getSelection) {
-            var range = document.createRange();
-            range.selectNode(document.getElementById("grid"));
-            window.getSelection().addRange(range);
-            document.execCommand("copy");
-            window.getSelection().removeAllRanges();
+        setTimeout(()=>{
+          let range, selection;
+          let textArea = document.getElementById("copytextarea");
+          if (isOS()) {
+              range = document.createRange();
+              range.selectNodeContents(textArea);
+              selection = window.getSelection();
+              selection.removeAllRanges();
+              selection.addRange(range);
+              textArea.setSelectionRange(0, 999999);
+          } else {
+              textArea.select();
           }
+          document.execCommand('copy');
         }, 1000);
 
         gameover = true
@@ -199,7 +203,7 @@ function genResultGrid() {
   <Transition>
     <div class="message" v-if="message">
       {{ message }}
-      <pre v-if="grid" id="grid">Insight Word<br />{{ grid }}</pre>
+      <pre v-if="grid" id="grid">{{ grid }}</pre>
       <p v-if="gameover && success" style="font-size: 0.8rem;">Result copied! You can paste it and send to others.</p>
       <p v-if="gameover"><a v-bind:href="link_url" style="color: #ffffff;" target="_blank">Learn more...</a></p>
     </div>
@@ -207,6 +211,8 @@ function genResultGrid() {
   <header>
     <h1>Insight Word</h1>
   </header>
+  <textarea id="copytextarea" class="copytextarea" contenteditable="contenteditable">Insight Word
+{{ grid }}</textarea>
   <div id="board">
     <div
       v-for="(row, index) in board"
@@ -313,6 +319,11 @@ function genResultGrid() {
 }
 .tile.revealed .back {
   transform: rotateX(0deg);
+}
+
+.copytextarea {
+  position: absolute;
+  top: -9999px;
 }
 
 @keyframes zoom {
