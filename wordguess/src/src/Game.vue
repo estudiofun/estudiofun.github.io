@@ -114,6 +114,7 @@ function completeRow() {
       // yay!
       setTimeout(() => {
         grid = genResultGrid()
+        navigator.clipboard.writeText('JWordle\n' + grid);
         showMessage(
           ['Wow!', 'Magnificent!', 'Impressive!', 'Splendid!', 'Great!', 'Phew!'][
             currentRowIndex
@@ -182,6 +183,7 @@ function genResultGrid() {
     <div class="message" v-if="message">
       {{ message }}
       <pre v-if="grid">{{ grid }}</pre>
+      <p v-if="gameover && success" style="font-size: 0.8rem;">Result copied! You can paste it and send to others.</p>
       <p v-if="gameover"><a v-bind:href="link_url" style="color: #ffffff;" target="_blank">Learn more...</a></p>
     </div>
   </Transition>
