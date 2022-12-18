@@ -112,9 +112,9 @@ function completeRow() {
     allowInput = false
     if (currentRow.every((tile) => tile.state === LetterState.CORRECT)) {
       // yay!
-      setTimeout(async () => {
+      setTimeout(() => {
         grid = genResultGrid()
-        await navigator.clipboard.writeText('JWordle\n' + grid);
+        navigator.clipboard.writeText('JWordle\n' + grid);
         showMessage(
           ['Wow!', 'Magnificent!', 'Impressive!', 'Splendid!', 'Great!', 'Phew!'][
             currentRowIndex
