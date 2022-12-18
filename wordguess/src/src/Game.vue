@@ -28,6 +28,7 @@ let shakeRowIndex = $ref(-1)
 let success = $ref(false)
 let gameover = $ref(false)
 let link_url = $ref('')
+let tries = $ref(0);
 
 // Keep track of revealed letters for the virtual keyboard
 const letterStates: Record<string, LetterState> = $ref({})
@@ -126,6 +127,7 @@ function completeRow() {
           -1
         )
 
+        tries++;
         gameover = true
         link_url = 'https://www.jw.org/en/library/books/Insight-on-the-Scriptures/' + answer;
         success = true
@@ -133,11 +135,13 @@ function completeRow() {
     } else if (currentRowIndex < board.length - 1) {
       // go the next row
       currentRowIndex++
+      tries++
       setTimeout(() => {
         allowInput = true
       }, 1600)
     } else {
       // game over :(
+      tries++
       setTimeout(() => {
         gameover = true
         link_url = 'https://www.jw.org/en/library/books/Insight-on-the-Scriptures/' + answer;
@@ -173,6 +177,7 @@ function copyResult() {
       textArea.select();
   }
   document.execCommand('copy');
+  textArea.blur();
   alert('Results copied! You can paste into a message to share.');
 }
 
@@ -205,14 +210,14 @@ function genResultGrid() {
     <div class="message" v-if="message">
       {{ message }}
       <pre v-if="grid" id="grid">{{ grid }}</pre>
-      <p v-if="gameover && success" style="font-size: 0.8rem;" v-on:click="copyResult"><a href="#" style="color: #ffffff;">Copy to clipboard</a></p>
+      <p v-if="gameover && success" style="font-size: 0.8rem;" v-on:click="copyResult"><a href="#" style="color: #ffffff;">Share Your Result</a></p>
       <p v-if="gameover"><a v-bind:href="link_url" style="color: #ffffff;" target="_blank">Learn more...</a></p>
     </div>
   </Transition>
   <header>
     <h1>Insight Word</h1>
   </header>
-  <textarea id="copytextarea" class="copytextarea" contenteditable="true">Insight Word
+  <textarea id="copytextarea" class="copytextarea" contenteditable="true">Insight Word  {{tries}}/6
 {{ grid }}</textarea>
   <div id="board">
     <div
