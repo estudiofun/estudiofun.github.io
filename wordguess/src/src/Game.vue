@@ -130,6 +130,7 @@ function completeRow() {
           let range, selection;
           let textArea = document.getElementById("copytextarea");
           if (isOS()) {
+              alert("is iOS (Ignore this message)");
               range = document.createRange();
               range.selectNodeContents(textArea);
               selection = window.getSelection();
