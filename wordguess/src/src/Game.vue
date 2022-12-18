@@ -126,22 +126,6 @@ function completeRow() {
           -1
         )
 
-        setTimeout(()=>{
-          let range, selection;
-          let textArea = document.getElementById("copytextarea");
-          if (isOS()) {
-              range = document.createRange();
-              range.selectNodeContents(textArea);
-              selection = window.getSelection();
-              selection.removeAllRanges();
-              selection.addRange(range);
-              textArea.setSelectionRange(0, 999999);
-          } else {
-              textArea.select();
-          }
-          document.execCommand('copy');
-        }, 1000);
-
         gameover = true
         link_url = 'https://www.jw.org/en/library/books/Insight-on-the-Scriptures/' + answer;
         success = true
@@ -175,6 +159,23 @@ function showMessage(msg: string, time = 1000) {
   }
 }
 
+function copyResult() {
+  let range, selection;
+  let textArea = document.getElementById("copytextarea");
+  if (isOS()) {
+      range = document.createRange();
+      range.selectNodeContents(textArea);
+      selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      textArea.setSelectionRange(0, 999999);
+  } else {
+      textArea.select();
+  }
+  document.execCommand('copy');
+  alert('Results copied! You can paste into a message to share.');
+}
+
 function shake() {
   shakeRowIndex = currentRowIndex
   setTimeout(() => {
@@ -204,7 +205,7 @@ function genResultGrid() {
     <div class="message" v-if="message">
       {{ message }}
       <pre v-if="grid" id="grid">{{ grid }}</pre>
-      <p v-if="gameover && success" style="font-size: 0.8rem;">Result copied! You can paste it and send to others.</p>
+      <p v-if="gameover && success" style="font-size: 0.8rem;" v-on:click="copyResult"><a href="#" style="color: #ffffff;">Copy to clipboard</a></p>
       <p v-if="gameover"><a v-bind:href="link_url" style="color: #ffffff;" target="_blank">Learn more...</a></p>
     </div>
   </Transition>
