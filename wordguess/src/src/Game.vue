@@ -114,13 +114,30 @@ function completeRow() {
       // yay!
       setTimeout(() => {
         grid = genResultGrid()
-        navigator.clipboard.writeText('JWordle\n' + grid);
+        
         showMessage(
           ['Wow!', 'Magnificent!', 'Impressive!', 'Splendid!', 'Great!', 'Phew!'][
             currentRowIndex
           ],
           -1
         )
+
+        setTimeout(() => {
+          if (document.selection) {
+            var range = document.body.createTextRange();
+            range.moveToElementText(document.getElementById("grid"));
+            range.select().createTextRange();
+            document.execCommand("copy");
+            document.selection.empty();
+          } else if (window.getSelection) {
+            var range = document.createRange();
+            range.selectNode(document.getElementById("grid"));
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();
+          }
+        });
+
         gameover = true
         link_url = 'https://www.jw.org/en/library/books/Insight-on-the-Scriptures/' + answer;
         success = true
@@ -182,7 +199,7 @@ function genResultGrid() {
   <Transition>
     <div class="message" v-if="message">
       {{ message }}
-      <pre v-if="grid">{{ grid }}</pre>
+      <pre v-if="grid" id="grid">Insight Word<br />{{ grid }}</pre>
       <p v-if="gameover && success" style="font-size: 0.8rem;">Result copied! You can paste it and send to others.</p>
       <p v-if="gameover"><a v-bind:href="link_url" style="color: #ffffff;" target="_blank">Learn more...</a></p>
     </div>
