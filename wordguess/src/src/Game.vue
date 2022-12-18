@@ -130,7 +130,6 @@ function completeRow() {
           let range, selection;
           let textArea = document.getElementById("copytextarea");
           if (isOS()) {
-              alert("is iOS (Ignore this message)");
               range = document.createRange();
               range.selectNodeContents(textArea);
               selection = window.getSelection();
@@ -212,7 +211,7 @@ function genResultGrid() {
   <header>
     <h1>Insight Word</h1>
   </header>
-  <textarea id="copytextarea" class="copytextarea" contenteditable="contenteditable">Insight Word
+  <textarea id="copytextarea" class="copytextarea" contenteditable="true">Insight Word
 {{ grid }}</textarea>
   <div id="board">
     <div
