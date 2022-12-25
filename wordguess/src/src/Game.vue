@@ -29,6 +29,12 @@ let success = $ref(false)
 let gameover = $ref(false)
 let link_url = $ref('')
 let tries = $ref(0);
+let hints = $ref(0);
+
+const hintMessage = $computed(() => {
+  if (hints == 0 || hints > 1) return hints + " Hints"
+  else return hints + " Hint"
+})
 
 // Keep track of revealed letters for the virtual keyboard
 const letterStates: Record<string, LetterState> = $ref({})
@@ -77,8 +83,41 @@ function clearTile() {
   }
 }
 
+function useHint(event) {
+  // find first unfound position
+  let foundpositions = [];
+  for (const row of board) {
+    let foundpos = 0;
+    for (const tile of row) {
+      if (tile.state === LetterState.CORRECT) {
+        foundpositions.push(foundpos);
+      }
+      foundpos++;
+    }
+  }
+
+  const answerLetters: (string | null)[] = answer.split('');
+  let allFound = true;
+  for (let i=0;i<5;i++) {
+    if (foundpositions.indexOf(i) === -1) {
+      currentRow[i].letter = answerLetters[i];
+      allFound = false;
+      setTimeout(() => {
+        currentRow[i].letter = '';
+      }, 1000);
+      break;
+    }
+  }
+
+  if (allFound) alert('You have all the letters!')
+  else hints++;
+
+  event.target.blur();
+}
+
 function completeRow() {
   if (currentRow.every((tile) => tile.letter)) {
+    console.log(currentRow)
     const guess = currentRow.map((tile) => tile.letter).join('')
     if (!allWords.includes(guess) && guess !== answer) {
       shake()
@@ -143,6 +182,7 @@ function completeRow() {
       // game over :(
       tries++
       setTimeout(() => {
+        grid = genResultGrid()
         gameover = true
         link_url = 'https://www.jw.org/en/library/books/Insight-on-the-Scriptures/' + answer;
         showMessage('The answer was: ' + answer.toUpperCase(), -1)
@@ -210,14 +250,14 @@ function genResultGrid() {
     <div class="message" v-if="message">
       {{ message }}
       <pre v-if="grid" id="grid">{{ grid }}</pre>
-      <p v-if="gameover && success" style="font-size: 0.8rem;" v-on:click="copyResult"><a href="#" style="color: #ffffff;">Share Your Result</a></p>
-      <p v-if="gameover"><a v-bind:href="link_url" style="color: #ffffff;" target="_blank">Learn more...</a></p>
+      <p v-if="gameover" style="font-size: 0.8rem;" v-on:click="copyResult"><a href="#" style="color: #ffffff;">Share Your Result</a></p>
+      <p v-if="gameover"><a v-bind:href="link_url" style="color: #ffffff;" target="_blank">Learn more about {{ answer.toUpperCase() }}</a></p>
     </div>
   </Transition>
   <header>
-    <h1>Insight Word</h1>
+    <h1>Insight Word</h1>&nbsp;&nbsp;|&nbsp;&nbsp;<button  v-on:click="useHint" class="hint-button">Use a Hint</button>
   </header>
-  <textarea id="copytextarea" class="copytextarea" contenteditable="true">Insight Word  {{tries}}/6
+  <textarea id="copytextarea" class="copytextarea" contenteditable="true">Insight Word  {{tries}}/6  ({{ hintMessage }})
 {{ grid }}</textarea>
   <div id="board">
     <div

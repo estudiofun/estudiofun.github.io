@@ -5,9 +5,16 @@ body {
   margin: 0px auto;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 h1 {
   margin: 4px 0;
-  font-size: 36px;
+  font-size: 24px;
+  display: inline;
 }
 
 header {
@@ -38,4 +45,10 @@ header {
 
 .absent {
   background-color: #787c7e !important;
+}
+
+.hint-button {
+  font-size: 0.9rem;
+  background-color: #ccc;
+  border-color: #333;
 }
