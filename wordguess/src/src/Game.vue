@@ -30,6 +30,7 @@ let gameover = $ref(false)
 let link_url = $ref('')
 let tries = $ref(0);
 let hints = $ref(0);
+let showHelp = $ref(false);
 
 const hintMessage = $computed(() => {
   if (hints == 0 || hints > 1) return hints + " Hints"
@@ -254,8 +255,26 @@ function genResultGrid() {
       <p v-if="gameover"><a v-bind:href="link_url" style="color: #ffffff;" target="_blank">Learn more about {{ answer.toUpperCase() }}</a></p>
     </div>
   </Transition>
+  <Transition>
+    <div class="message message-opaque" v-if="showHelp">
+      How to Play
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="help-close" data-testid="icon-close" v-on:click="() => showHelp = false"><path fill="var(--color-tone-1)" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+      <p class="help-text">Guess the Insight book word in 6 guesses.</p>
+      <ul class="help-text">
+        <li style="margin-bottom: 1rem;">Each guess must be a valid 5-letter <strong>dictionary or Insight book word.</strong></li>
+        <li>The tiles will change color to show how close your guess was to the word.</li>
+      </ul>
+      <p class="help-text"><strong class="correct">Green</strong> letters are in the word and in the correct spot.</p>
+      <p class="help-text"><strong class="present">Gold</strong> letters are in the word but in the wrong spot.</p>
+      <p class="help-text"><strong class="absent">Grey</strong> letters are not in the word at all.</p>
+    </div>
+  </Transition>
   <header>
-    <h1>Insight Word</h1>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="version">v1.0</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button v-on:click="useHint" class="hint-button">Use a Hint</button>
+    <h1>Insight Word</h1>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="version">v1.0</span>&nbsp;&nbsp;&nbsp;&nbsp;<button v-on:click="useHint" class="hint-button">Use a Hint</button>&nbsp;&nbsp;&nbsp;
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="help" viewBox="0 0 16 16" v-on:click="() => showHelp = true">
+      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+      <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+    </svg>
   </header>
   <textarea id="copytextarea" class="copytextarea" contenteditable="true">Insight Word  {{tries}}/6  ({{ hintMessage }})
 {{ grid }}</textarea>
@@ -315,9 +334,28 @@ function genResultGrid() {
   transition: opacity 0.3s ease-out;
   font-weight: 600;
 }
+.message-opaque {
+  background-color: rgb(0, 0, 0);
+}
 .message.v-leave-to {
   opacity: 0;
 }
+.help:hover, .help-close:hover {
+  cursor: pointer;
+}
+.help-text {
+  font-weight: normal;
+  font-size: 0.875rem;
+}
+.help-close {
+  fill: #fff;
+  height: 20px;
+  position: absolute;
+  padding: .5rem;
+  right: 0;
+  top: 0;
+}
+
 .row {
   display: grid;
   grid-template-columns: repeat(5, 1fr);

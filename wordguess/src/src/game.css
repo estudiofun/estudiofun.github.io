@@ -5,6 +5,10 @@ body {
   margin: 0px auto;
 }
 
+.help-text {
+  text-align: left;
+}
+
 header {
   display: flex;
   align-items: center;
