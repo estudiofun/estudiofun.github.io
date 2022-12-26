@@ -52,3 +52,7 @@ header {
   background-color: #ccc;
   border-color: #333;
 }
+
+.version {
+  font-size: 0.7rem;
+}

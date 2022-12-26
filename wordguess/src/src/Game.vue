@@ -255,7 +255,7 @@ function genResultGrid() {
     </div>
   </Transition>
   <header>
-    <h1>Insight Word</h1>&nbsp;&nbsp;|&nbsp;&nbsp;<button  v-on:click="useHint" class="hint-button">Use a Hint</button>
+    <h1>Insight Word</h1>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="version">v1.0</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button v-on:click="useHint" class="hint-button">Use a Hint</button>
   </header>
   <textarea id="copytextarea" class="copytextarea" contenteditable="true">Insight Word  {{tries}}/6  ({{ hintMessage }})
 {{ grid }}</textarea>
