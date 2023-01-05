@@ -5792,6 +5792,7 @@ const allowedGuesses = [
   'egged',
   'egger',
   'egmas',
+  'egypt',
   'ehing',
   'eider',
   'eidos',
